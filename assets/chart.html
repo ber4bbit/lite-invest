@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+    
+    <canvas id="chartEarn"></canvas>
+    
+    <canvas style="background-color: rgb(5, 20, 92)" id="chartActiveTraders"></canvas>
+    
+    <canvas id="chartWithdraw"></canvas>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script>
+        Chart.register(ChartDataLabels)
+        const labelsEarn = [
+            '2018',
+            '2019',
+            '2020',
+            '2021',
+            '01-04.2022',
+        ];
+
+        const dataEarn = {
+            labels: labelsEarn,
+            datasets: [{
+                label: 'Валовый зарботок, руб',
+                backgroundColor: 'rgb(5, 20, 92)',
+                borderColor: 'rgb(5, 20, 92)',
+                color: 'rgb(255, 255, 255)',
+                data: [
+                    6446270.47, 
+                    11347913.33, 
+                    53651662.01, 
+                    132795686.65, 
+                    283400000
+                ],
+            }]
+        };
+        
+        const dataLabels = {
+            align: 'end',
+            anchor: 'end',
+            backgroundColor: function(context) {
+              return context.dataset.backgroundColor;
+            },
+            borderRadius: 4,
+            color: function(context) {
+              return context.dataset.color;
+            },
+            font: {
+              weight: 'bold'
+            },
+            padding: 6
+        }
+
+        const configEarn = {
+            type: 'line',
+            data: dataEarn,
+            options: {
+                plugins: {
+                  datalabels: {
+                        ...dataLabels,
+                        formatter: function(value, context) {
+                          return new Intl
+                                        .NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' })
+                                        .format(value);
+                        }
+                    }
+                }
+            }
+        };
+
+
+        const chartEarn = new Chart(
+            document.getElementById('chartEarn'),
+            configEarn
+        );
+        
+        const labelsActiveTraders = [
+            '2018',
+            '2019',
+            '2020',
+            '2021',
+            '2022',
+        ];
+        
+        const dataActiveTraders = {
+            labels: labelsActiveTraders,
+            datasets: [{
+                label: 'Количество активных трейдеров',
+                backgroundColor: 'rgb(255, 255, 255)',
+                borderColor: 'rgb(255, 255, 255)',
+                data: [
+                    27, 
+                    63, 
+                    146, 
+                    320, 
+                    540
+                ],
+            }]
+        };
+        
+        const configActiveTraders = {
+            type: 'line',
+            data: dataActiveTraders,
+            options: {
+                plugins: {
+                    datalabels: {
+                        ...dataLabels
+                    }
+                }
+            }
+        };
+        
+        const chartActiveTraders = new Chart(
+            document.getElementById('chartActiveTraders'),
+            configActiveTraders
+        );
+        
+        const dataWithdraw = {
+            labels: labelsEarn,
+            datasets: [{
+                label: 'Выведено средств, млн.руб',
+                backgroundColor: 'rgb(5, 20, 92)',
+                borderColor: 'rgb(5, 20, 92)',
+                color: 'rgb(255, 255, 255)',
+                data: [
+                    5.05, 
+                    7.9, 
+                    24.1, 
+                    70.7, 
+                    55.4
+                ],
+            }]
+        };
+        
+        const configWithdraw = {
+            type: 'bar',
+            data: dataWithdraw,
+            options: {
+                plugins: {
+                    datalabels: {
+                        ...dataLabels
+                    }
+                }
+            }
+        };
+        
+        const chartWithdraw = new Chart(
+            document.getElementById('chartWithdraw'),
+            configWithdraw
+        );
+    </script>
+</body>
+</html>

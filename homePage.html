@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                sourceBlue: '#031138',
+              },
+              fontFamily: {
+                montse: ['Montserrat', 'sans-serif']
+              }
+            }
+          }
+        }
+      </script>
+    <title>Lite Invest</title>
+</head>
+<body>
+    <header class="text-white w-full">
+        <nav class="flex items-center w-inherit">
+            <div class="bg-sourceBlue flex w-3/5 justify-between">
+                <a href="/"><img src="./asset/home-page/logo.svg" alt="Here must be company logo image" class="w-16"></a>
+                <ul class="list-none font-montse flex text-xl items-center justify-around" style="width: 70%">
+                    <li>Главная</li>
+                    <li><a href="/">О нас</a></li>
+                    <li><a href="/">Обучение</a></li>
+                    <li><a href="/">Новости</a></li>
+                    <li><a href="/">Контакты</a></li>
+                    <li class="flex items-center">
+                        <a href="/"><img src="./asset/home-page/vk.svg" alt="Here must be vk icon" class="w-8 mr-3"></a>
+                        <a href="/"><img src="./asset/home-page/instagram.svg" alt="Here must be instagram icon" class="w-8 mr-3"></a>
+                        <a href="/"><img src="./asset/home-page/youtube.svg" alt="Here must be youtube icon" class="w-8"></a>
+                    </li>
+                </ul>
+            </div> 
+            <div class="flex justify-end items-center" style="width: 30%">
+                <a href="/"><img src="./asset/home-page/user.svg" alt="Here must be user sign in icon" class="w-9"></a>
+                <button class="bg-sourceBlue font-montse rounded-md px-2 py-1.5 ml-4" style="box-shadow: 0 0 0 2px #fff, 0 0 0 3px #031138;">Обратный звонок</button>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
