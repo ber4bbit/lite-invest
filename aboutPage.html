@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sourceBlue: '#031138',
+                        sourceBlueLighter: '#1f2766'
+                    },
+                    fontFamily: {
+                        montse: ['Montserrat', 'sans-serif']
+                    },
+                    letterSpacing: {
+                        ultraWide: '.2em'
+                    },
+                    width: {
+                        thirtyPercent: '30%'
+                    },
+                    backgroundImage: {
+                        freeEducationPageBg: "url('./asset/teaching-free-page/edu_free_1.svg')",
+                        freeEducationPageBgSec: "url('./asset/teaching-free-page/edu_free_2.svg')",
+                        proCoursePageClassBg: "url('./asset/teaching-free-page/1.svg')",
+                        freeEducationPageLineBg: "url('./asset/teaching-free-page/line_4.svg')",
+                        offersBg: "url('./asset/contacts/bg_block.png')",
+                        proCourseTeacherBg: "url('./asset/pro-course-page/teacher_oleg.png')",
+                        cryptoCourseTeacherBg: "url('./asset/teaching-crypto-page/teacher_maxim.png')",
+                        cryptoCourseLineBg: "url('./asset/teaching-crypto-page/line_5.svg')",
+                        aboutPageDirectorBg: "url('asset/about-page/line_3.svg')"
+                    }
+            }
+            }
+        }
+    </script>
+    
+    <title>О нас</title>
+</head>
+<body class="font-montse">
+    <section class="w-full text-white ">
+        <header class="flex px-10 bg-sourceBlue w-inherit items-center py-3 justify-between text-xl font-extralight"
+        style="border-bottom: 2px solid transparent; border-image: linear-gradient(to right, transparent, white, transparent 70%, skyblue , transparent); border-image-slice: 1;"
+        >
+            <nav class="flex items-center">
+                <img src="./asset/home-page/logo.svg" alt="Here must be logo icon" class="w-16 mr-6">
+                <ul class="list-none flex">
+                    <li class="mr-6"><a href="./homePage.html">Главная</a></li>
+                    <li class="mr-6"><a href="./aboutPage.html">О нас</a></li>
+                    <li class="mr-6"><a href="./teachingPage.html">Обучение</a></li>
+                    <li class="mr-6"><a href="">Новости</a></li>
+                    <li><a href="./contactsPage.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center w-32 justify-between">
+                <a href=""><img src="./asset/home-page/vk.svg" alt="Here must be vk icon" class="w-9"></a>
+                <a href=""><img src="./asset/home-page/instagram.svg" alt="Here must be instagram icon" class="w-9 h-6"></a>
+                <a href=""><img src="./asset/home-page/youtube.svg" alt="Here must be youtube icon" class="w-9"></a>
+            </div>
+            <div class="flex items-center bg-sourceBlue">
+                <button><img src="./asset/home-page/user.svg" alt="Here must be sign out icon" class="w-9"></button>
+                <button class="bg-white text-sourceBlue rounded-md px-2 py-1.5 ml-4" style="box-shadow: 0 0 0 2px #031138, 0 0 0 3px #fff;">Обратный звонок</button>
+            </div>
+        </header>
+        <main class="flex flex-col pb-48 bg-sourceBlue px-10">
+            <div class="flex">
+                <div class="flex flex-col mt-48 mr-12">
+                    <h2 class="text-xl font-extralight tracking-ultraWide mb-3">/о компании</h2>
+                    <img src="./asset/home-page/lite-invest.svg" alt="Here must be company name logo" class="mb-3 h-20">
+                    <h1 class="text-xl leading-relaxed font-extralight">Проп-трейдинговая компания</h1>
+                </div>
+                <img src="./asset/about-page/notebool.png" alt="Here must be a notebook image" class="" style="margin-top: -120px;">
+            </div>
+            <div class="flex justify-center" style="margin-top: -2%">
+                <div class="flex py-6 px-2 items-center rounded-xl bg-sourceBlueLighter w-2/5 mr-12">
+                    <img src="./asset/about-page/range_1.svg" alt="Here must be vertical line" class="h-40 mr-3">
+                    <p class="font-extralight text-xl">
+                        Специализируемся<br>на биржевой торговле, на фодновом,<br>срочном и валютном рынках Московской Биржи.
+                        Основной стратегией является скальпинг.
+                    </p>
+                </div>
+                <div class="flex py-6 px-2 items-center rounded-xl bg-sourceBlueLighter w-2/5">
+                    <img src="./asset/about-page/range_2.svg" alt="Here must be vertical line" class="h-40 mr-3">
+                    <p class="font-extralight text-xl">
+                        Используем удобный высокоскоростной биржевой терминал (Привод Бондаря), подключаемый по прямому доступу к бирже, за счет
+                        чего достигается мгновенное выставление и исполнение заявок.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <section class="mb-32 flex justify-center text-sourceBlue" style="margin-top: -8%;">
+            <main class="flex flex-col items-center rounded-xl w-4/5 py-6 bg-white" style="box-shadow: 0px 0px 20px gray;">
+                <p class="text-4xl font-medium mb-8">Стиль торговли</p>
+                <div class="flex justify-around w-full">
+                    <div class="flex flex-col w-1/4 items-center">
+                       <img src="./asset/teaching-page/icon_futures.svg" alt="Here must be futures image" class="h-24">  
+                       <p class="font-extralight mt-4">Фьючерсы</p>
+                    </div>
+                    <div class="flex flex-col w-1/4 items-center">
+                        <img src="./asset/about-page/icon_actions.svg" alt="Here must be actions image" class="h-24">  
+                        <p class="font-extralight mt-4">Акции</p>
+                    </div>
+                    <div class="flex flex-col w-1/4 items-center">
+                        <img src="./asset/teaching-page/icon_currency.svg" alt="Here must be currency image" class="h-24">  
+                        <p class="font-extralight mt-4">Валюта</p>
+                    </div>
+                    <div class="flex flex-col w-1/4 items-center">
+                        <img src="./asset/teaching-crypto-page/icon_crypto_currency.svg" alt="Here must be crypto-currency image" class="h-24">  
+                        <p class="font-extralight mt-4">криптовалюта</p>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </section>
+    <section class="px-10">
+        <p class="font-medium text-5xl mb-24 text-sourceBlue">Цифры скажут лучше о нас</p>
+        <canvas id="chartEarn"></canvas>
+    </section>
+
+    <section class="mt-24 flex justify-between w-full px-10">
+        <div class="bg-sourceBlue pt-6 px-6 rounded-xl" style="width: 49%">
+            <p class="text-white text-4xl font-medium">Количество активных<br>трейдеров</p>
+            <p class="font-extralight text-sourceBlue bg-white py-1 px-3 rounded-md w-max mt-6 text-xl">Наша команда</p>
+            <canvas id="chartActiveTraders" class="">
+
+            </canvas>
+        </div>
+        
+        <div class="flex flex-col rounded-xl px-4 py-10" style="width: 49%; box-shadow: 0px 0px 20px gray;">
+            <p class="font-extralight">Выведено средств с брокерского счета<br> за календарный год, руб.</p>
+            <canvas id="chartWithDraw"></canvas>
+            <p class="font-extralight mt-6">Наши трейдеры зарабатывают в среднем <b>от 200 тыс. руб./мес.</b></p>
+            <p class="font-extralight mt-6">Поэтому приоритетное направление нашей компании - <b>обучение трейдеров</b> с последующим <b>трудоустройством</b></p>
+        </div>
+    </section>
+
+    <section class="px-10 text-sourceBlue mt-32">
+        <p class="text-5xl font-medium">Топ-100 наших трейдеров</p>
+        <table class="table-auto border border-sourceBlue w-full mt-12 text-2xl">
+            <tr>
+                <th class="font-extralight border border-sourceBlue p-6 w-12">№</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">Имя</th>
+                <th class="font-extralight border border-sourceBlue w-48 text-left pl-3">Результат</th>
+            </tr>
+            <tr>
+                <th class="font-extralight border border-sourceBlue">1</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">П**** И***</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">19 781 725 ₽</th>
+            </tr>
+            <tr>
+                <th class="font-extralight border border-sourceBlue">2</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">Инвестор STEPN</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">5 214 747 ₽</th>
+            </tr>
+            <tr>
+                <th class="font-extralight border border-sourceBlue">3</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">Ф**** А*****</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">4 602 797 ₽</th>
+            </tr>
+            <tr>
+                <th class="font-extralight border border-sourceBlue">4</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">Ленивый трейдер</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">4 256 604 ₽</th>
+            </tr>
+            <tr>
+                <th class="font-extralight border border-sourceBlue">5</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">Хомячиный барон</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">3 615 253 ₽</th>
+            </tr>
+            <tr>
+                <th class="font-extralight border border-sourceBlue">6</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">В****** А*****</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">3 516 375 ₽</th>
+            </tr>
+            <tr>
+                <th class="font-extralight border border-sourceBlue">7</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">Нужна ПС 1млрд на валюте</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">3 615 253 ₽</th>
+            </tr>
+            <tr>
+                <th class="font-extralight border border-sourceBlue">8</th>
+                <th class="font-extralight border border-sourceBlue uppercase text-left pl-3">Лабазник</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">3 016 174 ₽</th>
+            </tr>
+            <tr>
+                <th class="font-extralight border border-sourceBlue">9</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">Г***** Т****</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">2 694 929 ₽</th>
+            </tr>
+            <tr>
+                <th class="font-extralight border border-sourceBlue">10</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">Ч****** С***</th>
+                <th class="font-extralight border border-sourceBlue text-left pl-3">2 675 620 ₽</th>
+            </tr>
+        </table>
+        <p class="font-extralight text-right my-4">Данные по состоянию на 17.05.2022 г.</p>
+        <div class="flex w-full justify-center">
+            <div class="flex items-center justify-between bg-white px-4 py-3 sm:px-6">
+                <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                  <div>
+                    <nav class="isolate inline-flex -space-x-px shadow-sm" aria-label="Pagination">
+                      <a href="#" class="font-montse relative inline-flex items-center border border-sourceBlue bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
+                        <!-- Heroicon name: mini/chevron-left -->
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                      <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+                      <a href="#" aria-current="page" class="relative z-10 inline-flex items-center border border-sourceBlue bg-sourceBlue px-4 py-2 text-sm font-extralight text-white focus:z-20">1</a>
+                      <a href="#" class="relative inline-flex items-center border border-sourceBlue bg-white px-4 py-2 text-xl font-extralight text-sourceBlue hover:bg-gray-50 focus:z-20">2</a>
+                      <a href="#" class="relative hidden items-center border border-sourceBlue bg-white px-4 py-2 text-xl font-extralight text-sourceBlue hover:bg-gray-50 focus:z-20 md:inline-flex">3</a>
+                      <span class="relative inline-flex items-center border border-sourceBlue bg-white px-4 py-2 text-xl font-extralight text-sourceBlue">...</span>
+                      <a href="#" class="relative hidden items-center border border-sourceBlue bg-white px-4 py-2 text-xl font-extralight tex-souretext-sourceBlue hover:bg-gray-50 focus:z-20 md:inline-flex">8</a>
+                      <a href="#" class="relative inline-flex items-center border border-sourceBlue bg-white px-4 py-2 text-xl font-extralight text-sourceBlue hover:bg-gray-50 focus:z-20">9</a>
+                      <a href="#" class="relative inline-flex items-center border border-sourceBlue bg-white px-4 py-2 text-xl font-extralight text-sourceBlue hover:bg-gray-50 focus:z-20">10</a>
+                      <a href="#" class="relative inline-flex items-center border border-sourceBlue bg-white px-2 py-2 text-xl font-extralight text-sourceBlue hover:bg-gray-50 focus:z-20">
+                        <!-- Heroicon name: mini/chevron-right -->
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <section class="mt-32 px-10">
+        <p class="font-medium text-5xl mb-12">О руководителе</p>
+        <img src="./asset/about-page/bracket.svg" alt="" class="h-24 mx-auto" style="margin-bottom: -6%;">
+        <div class="rounded-xl flex border-sourceBlue border px-24 bg-aboutPageDirectorBg bg-contain bg-no-repeat" style="background-position: 50% 160%">
+            <img src="./asset/about-page/valery.png" alt="Here must be teacher image">
+            <div class="font-extralight text-2xl flex flex-col justify-center ml-10">
+                <p class="leading-snug">За 6 лет успешной деятельности наша компания превратилась из одного офиса в Уфе<br>
+                    и 2 сотрудников, в крупную организацию<br>с филиалами в г. Екатеринбурге<br>и г. Шали (Чеченская республика).<br>
+                    А наша команда насчитывает уже более<br>500 трейдеров
+                </p>
+                <p class="mt-12">Валерий Ишназаров</p>
+                <p>Руководитель LITEINVEST</p>
+            </div>
+        </div>
+    </section>
+    <section class="px-10 mt-32">
+        <p class="font-medium text-5xl mb-10">Почему наши ученики достигают успеха?</p>
+        <div class="flex justify-between mb-3">
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4" style="width: 49%;">
+                <div class="flex justify-between mb-6 items-center">
+                    <img src="./asset/teaching-page/icon_program.svg" alt="" class="h-24 w-max mb-6">
+                    <div class="flex items-center">
+                        <p class="rounded-md border border-sourceBlue w-max h-max px-4 py-1 text-xl text-sourceBlue mr-4">Программа</p>
+                        <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                    </div>
+                </div>
+                <p class="text-xl font-extralight">Эффективная программа подготовки и мотивации трейдеров. Прошло более 3500 студентов, 2500 из которых
+                    имеют положительные результаты в трейдинге.
+                </p>
+            </div>
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4" style="width: 49%;">
+                <div class="flex justify-between items-center mb-6">
+                    <img src="./asset/teaching-page/icon_mentor.svg" alt="" class="h-24 w-max mb-6">
+                    <div class="flex items-center">
+                        <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue mr-4">Наставничество</p>
+                        <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                    </div>
+                </div>
+                <p class="text-xl font-extralight">Действующий трейдер, который обучил более 1000 учеников и будет вести вас к успешным результатам.</p>
+            </div>
+        </div>
+        <main class="grid grid-cols-3 gap-4 font-extralight mb-3">
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
+                <div class="flex justify-between items-center mb-6">
+                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Капитал</p>
+                    <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                </div>
+                <img src="./asset/teaching-page/icon_capital.svg" alt="" class="h-24 w-max mb-6">
+                <p class="text-xl">Деньги на торговлю мы предоставляем сами. Ваши средства не потребуются.</p>
+            </div>
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
+                <div class="flex justify-between items-center mb-6">
+                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Риск-менеджер</p>
+                    <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                </div>
+                <img src="./asset/teaching-page/icon_manager.svg" alt="" class="h-24 w-max mb-6">
+                <p class="text-xl">Помогает не допустить значительных убытков и поможем постепенному развитию.</p>
+            </div>
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
+                <div class="flex justify-between items-center mb-6">
+                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Поддержка</p>
+                    <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                </div>
+                <img src="./asset/about-page/icon_support.svg" alt="" class="h-24 w-max mb-6">
+                <p class="text-xl">Профессиональная поддержка компании: бухгалтерские услуги, вопросы с ликвидностью, с it-сопровождением.</p>
+            </div>
+        </main>
+        <div class="flex rounded-md border border-sourceBlue px-6 py-4 justify-between">
+            <div class="flex flex-col">
+                <div class="flex items-center mb-6">
+                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue mr-3">Преимущество</p>
+                    <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                </div>
+                <p class="text-xl font-extralight">Технологическое преимущество над обычными трейдерами,<br>прямой доступ на биржу, повышенные уровни плечей.</p>
+            </div>
+            <img src="./asset/about-page/icon_features.svg" alt="" class="h-24 w-max mr-24">
+        </div>
+        
+    </section>
+    <footer class="mt-32 px-10">
+        <section>
+            <p class="font-medium text-5xl mb-12">Пресса о нас</p>
+            <main class="flex justify-between">
+                <div class="w-1/3">
+                    <img src="./asset/about-page/press_1.jpg" alt="" class="h-96">
+                    <p class="font-extralight text-xl mt-6">Трейдинг на криптовалютном рынке: риски, нюансы, стратегии и инструменты</p>
+                </div>
+                <div class="w-1/3">
+                    <img src="./asset/about-page/press_2.svg" alt="" class="h-96">
+                    <p class="font-extralight text-xl mt-6">Лайт-Инвест: обычно нам не верят,<br>ведь мы учим бесплатно и даем свои деньги трейдерам.</p>
+                </div>
+                <div class="w-1/3">
+                    <img src="./asset/about-page/press_3.jpg" alt="" class="h-96">
+                    <p class="font-extralight text-xl mt-6">Как обучаться трейдингу: техники, стратегии, как начать и выйти на хороший заработок</p>
+                </div>
+            </main>
+        </section>
+        <section class="w-full mt-16">
+            <div class="flex">
+                <h1 class="text-gray-500">© 2016-2022 Lite-invest |&nbsp;</h1>
+                <a href="" class="text-sky-700">Политика конфиденциальности</a>
+            </div>
+            <p class="text-gray-500">ООО Лайт Инвест - это проп-трейдинговая компания, специализирующаяся на биржевой торговле. 
+                Компания не имеет ничего общего с форексом. Компания не выставляет публичных оферт. Компания
+                не занимается деятельностью, подлежащей лицензированию. Компания не предоставляет гарантий
+                заработка на бирже в какой бы то ни было форме. Компания не занимается брокерским обслуживанием.
+                Компания не занимается доверительным урпавлением. Компания не привлекает займы у населения
+                Все биржевые операции соверашются через брокеров, имеющих лицензию в соответствии с действующим законодательством.
+            </p>
+        </section>
+    </footer>
+    
+
+
+    <script>
+        Chart.register(ChartDataLabels)
+            const labelsEarn = [
+                '2018',
+                '2019',
+                '2020',
+                '2021',
+                '01-04.2022',
+            ];
+    
+            const dataEarn = {
+                labels: labelsEarn,
+                datasets: [{
+                    label: 'Валовый зарботок, руб',
+                    backgroundColor: 'rgb(5, 20, 92)',
+                    borderColor: 'rgb(5, 20, 92)',
+                    borderWidth: 0.4,
+                    color: '#031138',
+                    data: [
+                        6446270.47, 
+                        11347913.33, 
+                        53651662.01, 
+                        132795686.65, 
+                        283400000
+                    ],
+                }]
+            };
+            
+            const dataLabels = {
+                align: 'end',
+                anchor: 'end',
+                color: function(context) {
+                  return context.dataset.color;
+                },
+                font: {
+                  weight: 'lighter',
+                  family: "'Montserrat', sans-serif",
+                  size: 12
+                },
+                padding: {
+                    right: 0,
+                    bottom: 20
+                }
+            }
+
+            // const dataLabelsActiveTraders = {
+            //     align: 'end',
+            //     anchor: 'end',
+            //     color: function(context) {
+            //       return context.dataset.color;
+            //     },
+            //     font: {
+            //       weight: 'lighter',
+            //       family: "'Montserrat', sans-serif",
+            //       size: 16,
+            //     },
+            //     padding: {
+            //         right: 0,
+            //         bottom: 20
+            //     }
+            // }
+    
+            const configEarn = {
+                type: 'line',
+                data: dataEarn,
+                options: {
+                    scales: {
+                        yAxis: {
+                            display: false,
+                            stacked: true
+                        },
+                        xAxis: {
+                            grid: {
+                                display: false,
+                                borderColor: '#031138',
+                                borderWidth: 4,
+                            },
+                            ticks: {
+                                font: {
+                                    weight: 'lighter',
+                                    family: "'Montserrat', sans-serif",
+                                    size: 16
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                      datalabels: {
+                            ...dataLabels,
+                            formatter: function(value, context) {
+                              return new Intl
+                                            .NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' })
+                                            .format(value);
+                            }
+                        }
+                    }
+                }
+            };
+    
+            const chartEarn = new Chart(
+                document.getElementById('chartEarn'),
+                configEarn
+            );
+
+
+            const labelsActiveTraders = [
+                '2018',
+                '2019',
+                '2020',
+                '2021',
+                '2022',
+            ];
+        
+            const dataActiveTraders = {
+                labels: labelsActiveTraders,
+                datasets: [{
+                    label: 'Количество активных трейдеров',
+                    backgroundColor: 'rgb(255, 255, 255)',
+                    borderColor: 'rgb(255, 255, 255)',
+                    borderWidth: 1,
+                    color: '#ffffff',
+                    data: [
+                        27, 
+                        63, 
+                        146, 
+                        320, 
+                        540
+                    ],
+                }]
+            };
+        
+        const configActiveTraders = {
+            type: 'line',
+            data: dataActiveTraders,
+            options: {
+                scales: {
+                    xAxis: {
+                        ticks: {
+                            color: '#ffffff',
+                            font: {
+                                    weight: 'lighter',
+                                    family: "'Montserrat', sans-serif",
+                                    size: 16
+                            }
+                        },
+                        grid: {
+                            borderColor: 'white',
+                            borderWidth: 0,
+                            color: 'white',
+                            display: false
+                        }
+                    },
+                    yAxis: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    datalabels: {
+                        ...dataLabels
+                    }
+                }
+            },
+            plugins: [{ // this is the magical bit :)
+                afterRender: function(c, options) {
+                let meta = c.getDatasetMeta(0),
+                    max;
+                c.ctx.save();
+                c.ctx.strokeStyle = c.config.options.scales.xAxes[0].gridLines.color;
+                c.ctx.lineWidth = c.config.options.scales.xAxes[0].gridLines.lineWidth;
+                c.ctx.beginPath();
+                meta.data.forEach(function(e) {
+                    if (max == undefined || c.config.data.datasets[0].data[e._index] > max) {
+                    max = c.config.data.datasets[0].data[e._index];
+                    }
+                    c.ctx.moveTo(e._model.x, meta.dataset._scale.bottom);
+                    c.ctx.lineTo(e._model.x, e._model.y);
+                });
+                c.ctx.textBaseline = 'top';
+                c.ctx.textAlign = 'right';
+                c.ctx.fillStyle = 'black';
+                c.ctx.fillText('Max value: ' + max, c.width - 10, 10);
+                c.ctx.stroke();
+                c.ctx.restore();
+                }
+            }]
+        };
+
+        const chartActiveTraders = new Chart(
+            document.getElementById('chartActiveTraders'),
+            configActiveTraders
+        );
+
+        const dataWithdraw = {
+            labels: labelsEarn,
+            datasets: [{
+                label: 'Выведено средств, млн.руб',
+                backgroundColor: 'rgb(5, 20, 92)',
+                borderColor: 'rgb(5, 20, 92)',
+                color: 'rgb(255, 255, 255)',
+                data: [
+                    5.05, 
+                    7.9, 
+                    24.1, 
+                    70.7, 
+                    55.4
+                ],
+            }]
+        };
+        
+        const configWithdraw = {
+            type: 'bar',
+            data: dataWithdraw,
+            options: {
+                scales: {
+                    yAxis: {
+                        display: false
+                    },
+                    xAxis: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#031138',
+                            font: {
+                                weight: 'lighter',
+                                family: "'Montserrat', sans-serif",
+                                size: 16
+                            }
+                        },
+                    }
+                },
+                plugins: {
+                    datalabels: {
+                        ...dataLabels
+                    }
+                }
+            }
+        };
+        
+        const chartWithdraw = new Chart(
+            document.getElementById('chartWithDraw'),
+            configWithdraw
+        );
+        </script>
+</body>
+</html>

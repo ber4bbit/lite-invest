@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                colors: {
+                    sourceBlue: '#031138',
+                },
+                fontFamily: {
+                    montse: ['Montserrat', 'sans-serif']
+                },
+                letterSpacing: {
+                    ultraWide: '.2em'
+                },
+                width: {
+                    thirtyPercent: '30%'
+                },
+                backgroundImage: {
+                    freeEducationPageBg: "url('./asset/teaching-free-page/edu_free_1.svg')",
+                    freeEducationPageBgSec: "url('./asset/teaching-free-page/edu_free_2.svg')",
+                    proCoursePageClassBg: "url('./asset/teaching-free-page/1.svg')",
+                    freeEducationPageLineBg: "url('./asset/teaching-free-page/line_4.svg')",
+                    offersBg: "url('./asset/contacts/bg_block.png')",
+                    proCourseTeacherBg: "url('./asset/pro-course-page/teacher_oleg.png')",
+                    cryptoCourseTeacherBg: "url('./asset/teaching-crypto-page/teacher_maxim.png')",
+                    cryptoCourseLineBg: "url('./asset/teaching-crypto-page/line_5.svg')"
+                }
+          }
+        }
+    }
+    </script>
+    <style>
+        .customList li {
+            padding-left: 2rem;
+            background-image: url(./asset/teaching-page/marker-arrow.svg);
+            background-position: 0 0;
+            background-size: 2rem 2rem;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <title>Обучение на криптобирже</title>
+</head>
+<body class="font-montse">
+    <section class="w-full text-white px-10" style="background: linear-gradient(to right, #031138 70%, #ffffff 30%)">
+        <header class="flex w-inherit items-center py-3 justify-between text-xl font-extralight"
+        style="border-bottom: 2px solid transparent; border-image: linear-gradient(to right, transparent, white, transparent 70%, skyblue , transparent); border-image-slice: 1;"
+        >
+            <nav class="flex items-center">
+                <img src="./asset/home-page/logo.svg" alt="Here must be logo icon" class="w-16 mr-6">
+                <ul class="list-none flex">
+                    <li class="mr-6"><a href="">Главная</a></li>
+                    <li class="mr-6"><a href="">О нас</a></li>
+                    <li class="mr-6"><a href="">Обучение</a></li>
+                    <li class="mr-6"><a href="">Новости</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center w-32 justify-between">
+                <a href=""><img src="./asset/home-page/vk.svg" alt="Here must be vk icon" class="w-9"></a>
+                <a href=""><img src="./asset/home-page/instagram.svg" alt="Here must be instagram icon" class="w-9 h-6"></a>
+                <a href=""><img src="./asset/home-page/youtube.svg" alt="Here must be youtube icon" class="w-9"></a>
+            </div>
+            <div class="flex items-center">
+                <button><img src="./asset/home-page/user.svg" alt="Here must be sign out icon" class="w-9"></button>
+                <button class="bg-sourceBlue rounded-md px-2 py-1.5 ml-4" style="box-shadow: 0 0 0 2px #fff, 0 0 0 3px #031138;">Обратный звонок</button>
+            </div>
+        </header>
+        <main class="flex relative">
+            <div class="flex flex-col mt-14 ">
+                <h2 class="text-xl font-extralight tracking-ultraWide">/курс</h2>
+                <h1 class="uppercase text-8xl leading-relaxed font-semibold relative z-10">Обучение на<br>крипто-бирже</h1>
+            </div>
+            <img src="./asset/contacts/line_1.svg" alt="Here must be vector line" class="absolute z-1" style="width: 850px; left: 35%;">
+        </main>
+    </section>
+    <section class="mt-24 p-10 font-medium text-sourceBlue">
+        <p class="text-5xl">Преимущества обучения</p>
+        <main class="flex jutify-between mt-12">
+            <div class="flex flex-col w-1/3">
+                <img src="./asset/teaching-page/icon_currency.svg" alt="Here must be an advatnage icon" class="h-32 my-0 mx-auto">
+                <p class="my-0 mx-auto text-xl mt-6">Беслпатно</p>
+            </div>
+            <div class="flex flex-col w-1/3">
+                <img src="./asset/teaching-free-page/icon_program.svg" alt="Here must be an advatnage icon" class="h-32 my-0 mx-auto">
+                <p class="my-0 mx-auto text-xl mt-6">Можно учиться<br>в любое время</p>
+            </div>
+            <div class="flex flex-col w-1/3 text-center">
+                <img src="./asset/teaching-free-page/icon_privod.svg" alt="Here must be an advatnage icon" class="h-32 my-0 mx-auto">
+                <p class="my-0 mx-auto text-xl mt-6">Торговля<br>на реальном счете</p>
+            </div>
+        </main>
+    </section>
+    <section class="mt-24 flex justify-between w-full px-10">
+        <div class="bg-cryptoCourseTeacherBg bg-contain bg-no-repeat pt-6 pl-6" style="width: 50%">
+            <p class="text-white text-4xl font-medium">Преподаватель курса</p>
+        </div>
+        <div class="flex flex-col rounded-xl px-4 py-10" style="width: 50%; box-shadow: 0px 0px 20px gray;">
+            <img src="./asset/teaching-crypto-page/teacher_maxim_profit.png" alt="Here must be card image" class="h-3/4 w-2/4 mx-auto">
+            <div class="border-b-4 border-sourceBlue w-max text-sourceBlue pb-6 mt-3">
+                <div class="flex">
+                    <p class="font-extralight mr-1">Максим</p>
+                    <p>Федосин</p>
+                </div>
+                <p class="font-extralight">Действующий трейдер</p>
+            </div>
+            <p class="font-extralight mt-6">Имеет положительный результат в трейдинге более 32 месяцев</p>
+        </div>
+    </section>
+    <section class="text-sourceBlue p-10 mt-32">
+        <p class="font-medium text-5xl font-medium mb-6">Преимущества обучения</p>
+        <main class="grid grid-cols-2 gap-4 font-extralight">
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
+                <div class="flex justify-between items-center mb-6">
+                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Задания</p>
+                    <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                </div>
+                <img src="./asset/pro-course-page/icon_format.svg" alt="" class="h-24 w-max mb-6">
+                <p class="text-xl">Выполнение и проверка домашних заданий</p>
+            </div>
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
+                <div class="flex justify-between items-center mb-6">
+                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Связь</p>
+                    <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                </div>
+                <img src="./asset/teaching-page/icon_mentor.svg" alt="" class="h-24 w-max mb-6">
+                <p class="text-xl">Обратная связь от опытного наставника</p>
+            </div>
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
+                <div class="flex justify-between items-center mb-6">
+                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Торговля</p>
+                    <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                </div>
+                <img src="./asset/teaching-page/icon_privod.svg" alt="" class="h-24 w-max mb-6">
+                <p class="text-xl">Торговля на реальном счете</p>
+            </div>
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
+                <div class="flex justify-between items-center mb-6">
+                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Работа</p>
+                    <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                </div>
+                <img src="./asset/teaching-page/icon_manager.svg" alt="" class="h-24 w-max mb-6">
+                <p class="text-xl">Официальное Трудоустройство</p>
+            </div>
+        </main>
+    </section>
+    <section class="px-10 mt-48 w-full text-sourceBlue mb-40 relative">
+        <img src="./asset/teaching-crypto-page/line_5.svg" alt="Here must be vector line" class="absolute" style="width: 2000px; top: -150px; left: -50px; z-index: 0;">
+        <main class="flex relative z-100">
+            <p class="text-5xl font-medium w-1/3">Почему<br>выбирают<br>нас?</p>
+            <div class="w-3/5 flex rounded-xl items-center relative bg-white" style="box-shadow: 0px 0px 20px gray; z-index: 100;">
+                <div class="flex flex-col ml-12">
+                    <p class="text-3xl font-extralight mb-8">Вы получите рефбэк<br>по комиссии</p>
+                    <div class="flex">
+                        <p class="text-3xl font-extralight">до</p>
+                        <p class="text-7xl font-extralight">35</p>
+                        <p class="text-3xl font-extralight pt-8">%</p>
+                        <img src="./asset/teaching-crypto-page/arrow_curly.svg" alt="Here must be curly arrow" class="h-20 ml-8" style="margin-top: -26px">
+                    </div>
+                </div>
+                <img src="./asset/teaching-crypto-page/cards.png" alt="Here must be cards image" class="h-72">
+            </div>
+        </main>
+    </section>
+    <section class="text-sourceBlue px-10">
+        <p class="font-medium text-5xl">Как будет проходить обучение</p>
+        <main class="flex mt-20">
+            <div class="flex flex-col text-center w-1/3 items-center">
+                <p class="bg-sourceBlue rounded-full w-max text-white font-medium text-5xl px-7 py-3">1</p>
+                <p class="text-2xl font-extralight mt-8">Подать заявку в группу</p>
+            </div>
+            <div class="flex flex-col text-center w-1/3 items-center">
+                <p class="bg-sourceBlue rounded-full w-max text-white font-medium text-5xl px-6 py-3">2</p>
+                <p class="text-2xl font-extralight mt-8">Зарегистрироваться по нашей реферальной ссылке</p>
+            </div>
+            <div class="flex flex-col text-center w-1/3 items-center">
+                <p class="bg-sourceBlue rounded-full w-max text-white font-medium text-5xl px-6 py-3">3</p>
+                <p class="text-2xl font-extralight mt-8">Отправить реф. id в сообщения группы для проверки</p>
+            </div>
+        </main>
+    </section>
+    <section class="text-sourceBlue p-10 mt-32">
+        <p class="font-medium text-5xl font-medium mb-6">Преимущества обучения</p>
+        <main class="grid grid-cols-2 gap-4 font-extralight">
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
+                <div class="flex justify-between">
+                    <img src="./asset/teaching-crypto-page/icon_hand.svg" alt="" class="h-24 w-max mb-6">
+                    <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                </div>
+                <p class="text-xl">9 фундаментальных занятий с исчерпывающими ценными знаниями</p>
+            </div>
+            <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
+                <div class="flex justify-between">
+                    <img src="./asset/teaching-crypto-page/icon_percent.svg" alt="" class="h-24 w-max mb-6">
+                    <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
+                </div>
+                <p class="text-xl">Выполнение и проверка домашних заданий</p>
+            </div>
+        </main>
+    </section>
+    <section class="my-24 flex justify-center text-sourceBlue">
+        <main class="flex flex-col items-center rounded-xl w-4/5 py-6" style="box-shadow: 0px 0px 20px gray;">
+            <p class="text-4xl font-medium mb-8">Стиль торговли</p>
+            <div class="flex justify-around w-full">
+                <div class="flex flex-col w-1/4 items-center">
+                   <img src="./asset/teaching-crypto-page/icon_crypto_currency.svg" alt="" class="h-24">  
+                   <p class="font-extralight mt-4">Скальпинг</p>
+                </div>
+            </div>
+        </main>
+    </section>
+    <section class="px-10 mb-32">
+        <p class="text-5xl font-medium text-sourceBlue mb-12">Что будет на обучении</p>
+        <div class="flex justify-center">
+            <ul class="bg-sourceBlue text-white font-extralight customList rounded-xl w-2/5 py-4 pl-3 mr-6">
+                <li class="mb-3">Мастер классы</li>
+                <li class="mb-3">Совместная торговля криптовалютой</li>
+                <li class="mb-3">Разборы сделок</li>
+                <li>Поддержка и констультации</li>
+            </ul>
+            <ul class="bg-sourceBlue text-white font-extralight customList rounded-xl w-2/5 py-4 px-3">
+                <li class="mb-3">Возврат комиссии с торогвли на Binance и FTX</li>
+                <li class="mb-3">Интервью с опытными трейдерами</li>
+                <li class="mb-3">Youtube стримы</li>
+                <li>Youtube-трансляции торгового экрана</li>
+            </ul>
+        </div>
+    </section>
+    <section class="w-full bg-freeEducationPageLineBg bg-no-repeat bg-center justify-center flex py-12" style="background-size: 1200px;">
+        <div class="bg-sourceBlue w-max py-6 px-24 items-center flex flex-col text-center" style="border-radius: 24px">
+            <p class="text-white font-medium text-4xl tracking-wider">Стоимость<br>обучения</p>
+            <button class="bg-white rounded-md px-12 py-1.5 mt-6 text-sourceBlue font-medium text-2xl" style="box-shadow: 0 0 0 2px #031138, 0 0 0 3px #fff;">0 руб</button>
+        </div>
+    </section>
+    <footer class="mt-24">
+        <section class="mt-32 m-auto bg-offersBg bg-no-repeat px-10 py-10" style="background-size: 100% 100%;">
+            <h1 class="text-sourceBlue text-4xl font-semibold mb-8 letter-widest">Оставьте заявку на обучение<br>и начните зарабатывать<br>
+                от 100 тыс. руб. на криптобирже
+            </h1>
+            <form action="" class="flex flex-col w-max">
+                <input type="text" class="placeholder:text-white text-white bg-transparent border border-sourceBlue rounded-md mb-2 px-4 py-1" placeholder="Ваше имя">
+                <input type="phone"class="placeholder:text-white text-white bg-transparent border border-sourceBlue rounded-md mb-2 px-4 py-1" placeholder="+7 999 999 99 99">
+                <button class="bg-sourceBlue text-white font-medium rounded text-xl px-10 py-1">Оставить заявку</button>
+            </form>
+        </section>
+        <section class="w-full px-10 mt-16">
+            <div class="flex">
+                <h1 class="text-gray-500">© 2016-2022 Lite-invest |&nbsp;</h1>
+                <a href="" class="text-sky-700">Политика конфиденциальности</a>
+            </div>
+            <p class="text-gray-500">ООО Лайт Инвест - это проп-трейдинговая компания, специализирующаяся на биржевой торговле. 
+                Компания не имеет ничего общего с форексом. Компания не выставляет публичных оферт. Компания
+                не занимается деятельностью, подлежащей лицензированию. Компания не предоставляет гарантий
+                заработка на бирже в какой бы то ни было форме. Компания не занимается брокерским обслуживанием.
+                Компания не занимается доверительным урпавлением. Компания не привлекает займы у населения
+                Все биржевые операции соверашются через брокеров, имеющих лицензию в соответствии с действующим законодательством.
+            </p>
+        </section>
+    </footer>
+</body>
+</html>

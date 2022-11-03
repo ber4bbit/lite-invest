@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                colors: {
+                    sourceBlue: '#031138',
+                },
+                fontFamily: {
+                    montse: ['Montserrat', 'sans-serif']
+                },
+                letterSpacing: {
+                    ultraWide: '.2em'
+                },
+                width: {
+                    thirtyPercent: '30%'
+                },
+                backgroundImage: {
+                    freeEducationPageBg: "url('./asset/teaching-free-page/edu_free_1.svg')",
+                    freeEducationPageBgSec: "url('./asset/teaching-free-page/edu_free_2.svg')",
+                    freeEducationPageSkillBg: "url('./asset/teaching-free-page/1.svg')",
+                    freeEducationPageLineBg: "url('./asset/teaching-free-page/line_4.svg')",
+                    offersBg: "url('./asset/contacts/bg_block.png')"
+                }
+          }
+        }
+    }
+    </script>
+    <title>Бесплатное обучение</title>
+
+</head>
+<body class="font-montse">
+    <section class="w-full text-white px-10" style="background: linear-gradient(to right, #031138 70%, #ffffff 30%)">
+        <header class="flex w-inherit items-center py-3 justify-between text-xl font-extralight"
+        style="border-bottom: 2px solid transparent; border-image: linear-gradient(to right, transparent, white, transparent 70%, skyblue , transparent); border-image-slice: 1;"
+        >
+            <nav class="flex items-center">
+                <img src="./asset/home-page/logo.svg" alt="Here must be logo icon" class="w-16 mr-6">
+                <ul class="list-none flex">
+                    <li class="mr-6"><a href="">Главная</a></li>
+                    <li class="mr-6"><a href="">О нас</a></li>
+                    <li class="mr-6"><a href="">Обучение</a></li>
+                    <li class="mr-6"><a href="">Новости</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center w-32 justify-between">
+                <a href=""><img src="./asset/home-page/vk.svg" alt="Here must be vk icon" class="w-9"></a>
+                <a href=""><img src="./asset/home-page/instagram.svg" alt="Here must be instagram icon" class="w-9 h-6"></a>
+                <a href=""><img src="./asset/home-page/youtube.svg" alt="Here must be youtube icon" class="w-9"></a>
+            </div>
+            <div class="flex items-center">
+                <button><img src="./asset/home-page/user.svg" alt="Here must be sign out icon" class="w-9"></button>
+                <button class="bg-sourceBlue rounded-md px-2 py-1.5 ml-4" style="box-shadow: 0 0 0 2px #fff, 0 0 0 3px #031138;">Обратный звонок</button>
+            </div>
+        </header>
+        <main class="flex relative">
+            <div class="flex flex-col mt-14 ">
+                <h2 class="text-xl font-extralight tracking-ultraWide">/курс</h2>
+                <h1 class="uppercase text-8xl leading-relaxed font-semibold relative z-10">Бесплатное<br>обучение</h1>
+            </div>
+            <img src="./asset/contacts/line_1.svg" alt="Here must be vector line" class="absolute z-1" style="width: 850px; left: 35%;">
+        </main>
+    </section>
+    <section class="py-10 px-10 text-sourceBlue flex justify-between">
+        <div class="flex flex-col w-1/4">
+            <div class="border-b-4 border-sourceBlue font-medium flex items-baseline mb-2">
+                <p class="text-6xl mr-2">6</p>
+                <p class="text-xl">лет</p>
+            </div>
+            <p class="font-extralight">Наша компания предоставляет бесплатное обучение</p>
+        </div>
+        <div class="flex flex-col w-1/4">
+            <div class="border-b-4 border-sourceBlue font-medium flex items-baseline mb-2">
+                <p class="text-6xl mr-2">3500</p>
+                <p class="text-xl">чел.</p>
+            </div>
+            <p class="font-extralight">Прошли обучение за время существования курса</p>
+        </div>
+        <div class="flex flex-col w-1/4">
+            <div class="border-b-4 border-sourceBlue font-medium flex items-baseline mb-2">
+                <p class="text-6xl mr-2">20</p>
+                <p class="text-xl">%</p>
+            </div>
+            <p class="font-extralight">Студентов показывают положительные результаты в первое время торговли</p>
+        </div>
+    </section>
+    <section class="mt-24 px-10 py-10 flex-col">
+        <div class="flex justify-between mb-12 items-center">
+            <img src="./asset/teaching-free-page/edu_free_1.svg" alt="Here must be education image" class="rounded-md w-2/5">
+            <p class="w-2/4 font-extralight text-xl">После первичного интервью студент получает доступ
+                к систематизированным обучающим материалам, включается в нашу закрыту группу "Вконтакте", в которой
+                он может неформально общаться с профессиональными трейдерами и получать ответы на интересующие его вопросы.
+            </p>
+        </div>
+        <div class="flex justify-between items-center">
+            <p class="w-2/4 font-extralight text-xl">В ходе бесплатного самостоятельного обучения студено получает базовые знания
+                о принципах работы "Лайт-Инвест" и о применяюмых ею методах торговли на биржевом рынке, среди которых скальпинг, дейтрейдинг,
+                торговля по стакану и тд.
+            </p>
+            <img src="./asset/teaching-free-page/edu_free_2.svg" alt="Here must be education image" class="rounded-md w-2/5">
+        </div>
+    </section>
+    <section class="mt-24 p-10 font-medium text-sourceBlue">
+        <p class="text-5xl">Преимущества обучения</p>
+        <div class="flex jutify-between mt-12">
+            <div class="flex flex-col w-1/3">
+                <img src="./asset/teaching-free-page/icon_currency.svg" alt="Here must be an advatnage icon" class="h-32 my-0 mx-auto">
+                <p class="my-0 mx-auto text-xl mt-6">Бесплатно</p>
+            </div>
+            <div class="flex flex-col w-1/3">
+                <img src="./asset/teaching-free-page/icon_program.svg" alt="Here must be an advatnage icon" class="h-32 my-0 mx-auto">
+                <p class="my-0 mx-auto text-xl mt-6">Можно учиться<br>в любое время</p>
+            </div>
+            <div class="flex flex-col w-1/3 text-center">
+                <img src="./asset/teaching-free-page/icon_privod.svg" alt="Here must be an advatnage icon" class="h-32 my-0 mx-auto">
+                <p class="my-0 mx-auto text-xl mt-6">Торговля<br>на реальном счете</p>
+            </div>
+        </div>
+    </section>
+    <section class="p-10 text-sourceBlue">
+        <p class="text-5xl font-medium mb-12">После бесплатного обучения вы освоите:</p>
+        <div class="flex flex-col">
+            <div class="border rounded border-sourceBlue bg-freeEducationPageSkillBg bg-no-repeat bg-left mb-4" style="background-size: 12rem 12rem">
+                <div class="flex items-center">
+                    <img src="./asset/teaching-free-page/icon_futures.svg" alt="Here must be an skill icon" class="h-24 my-6 ml-8">
+                    <div class="ml-48">
+                        <p class="text-3xl mb-3 font-medium">Основы трейдинга</p>
+                        <p class="font-extralight">Вы познакомитесь с биржевой торговлей, узнаете ее основные принципы, будете знать как получать прибыль на бирже</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border rounded border-sourceBlue bg-freeEducationPageSkillBg bg-no-repeat bg-left mb-4" style="background-size: 12rem 12rem">
+                <div class="flex items-center">
+                    <img src="./asset/teaching-free-page/icon_briefcase.svg" alt="Here must be an skill icon" class="h-24 my-6 ml-8">
+                    <div class="ml-44">
+                        <p class="text-3xl mb-3 font-medium">Риск / мани-менеджмента</p>
+                        <p class="font-extralight">Благодаря этому вы сможете контролировать риски и просадки вашего портфеля</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border rounded border-sourceBlue bg-freeEducationPageSkillBg bg-no-repeat bg-left mb-4" style="background-size: 12rem 12rem">
+                <div class="flex items-center">
+                    <img src="./asset/teaching-free-page/icon_algo.svg" alt="Here must be an skill icon" class="h-24 my-6 ml-8">
+                    <div class="ml-48">
+                        <p class="text-3xl mb-3 font-medium">Алготрейдинг</p>
+                        <p class="font-extralight">Научитесь распозновать в биржевом стакане высокочастотных торговых роботов и алгоритмов, научитесь торговать от них</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border rounded border-sourceBlue bg-freeEducationPageSkillBg bg-no-repeat bg-left mb-4" style="background-size: 12rem 12rem">
+                <div class="flex items-center">
+                    <img src="./asset/teaching-free-page/icon_tech.svg" alt="Here must be an skill icon" class="h-24 my-6 ml-8">
+                    <div class="ml-48">
+                        <p class="text-3xl mb-3 font-medium">Теханализ</p>
+                        <p class="font-extralight">Научитесь прогнозировать изменения цен на основе прошлых данных и аналогичных обстоятельствах, что позволит извлекать
+                            большую прибыль в будущем и снижать убытки
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border rounded border-sourceBlue bg-freeEducationPageSkillBg bg-no-repeat bg-left mb-4" style="background-size: 12rem 12rem">
+                <div class="flex items-center">
+                    <img src="./asset/teaching-free-page/icon_news.svg" alt="Here must be an skill icon" class="h-24 my-6 ml-8">
+                    <div class="ml-48">
+                        <p class="text-3xl mb-3 font-medium">Чтение ленты</p>
+                        <p class="font-extralight">Благодаря этому навыку вы научитесь понимать ленту совершенных сделок</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border rounded border-sourceBlue bg-freeEducationPageSkillBg bg-no-repeat bg-left" style="background-size: 12rem 12rem">
+                <div class="flex items-center">
+                    <img src="./asset/teaching-free-page/icon_job.svg" alt="Here must be an skill icon" class="h-24 my-6 ml-8">
+                    <div class="ml-48">
+                        <p class="text-3xl mb-3 font-medium">И многое другое...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-full bg-freeEducationPageLineBg bg-no-repeat bg-center justify-center flex py-12" style="background-size: 1200px;">
+        <div class="bg-sourceBlue w-max py-6 px-24 items-center flex flex-col text-center" style="border-radius: 24px">
+            <p class="text-white font-medium text-4xl tracking-wider">Стоимость<br>обучения</p>
+            <button class="bg-white rounded-md px-12 py-1.5 mt-6 text-sourceBlue font-medium text-2xl" style="box-shadow: 0 0 0 2px #031138, 0 0 0 3px #fff;">0 руб</button>
+        </div>
+    </section>
+    <footer class="mt-24">
+        <section class="mt-32 m-auto bg-offersBg bg-no-repeat px-10 py-10" style="background-size: 100% 100%;">
+            <h1 class="text-sourceBlue text-4xl font-semibold mb-8 letter-widest">Оставьте заявку на обучение<br>и начните зарабатывать<br>
+                от 200 тыс. руб. на трейдинге
+            </h1>
+            <form action="" class="flex flex-col w-max">
+                <input type="text" class="placeholder:text-white text-white bg-transparent border border-sourceBlue rounded-md mb-2 px-4 py-1" placeholder="Ваше имя">
+                <input type="phone"class="placeholder:text-white text-white bg-transparent border border-sourceBlue rounded-md mb-2 px-4 py-1" placeholder="+7 999 999 99 99">
+                <button class="bg-sourceBlue text-white font-medium rounded text-xl px-10 py-1">Оставить заявку</button>
+            </form>
+        </section>
+        <section class="w-full px-10 mt-16">
+            <div class="flex">
+                <h1 class="text-gray-500">© 2016-2022 Lite-invest |&nbsp;</h1>
+                <a href="" class="text-sky-700">Политика конфиденциальности</a>
+            </div>
+            <p class="text-gray-500">ООО Лайт Инвест - это проп-трейдинговая компания, специализирующаяся на биржевой торговле. 
+                Компания не имеет ничего общего с форексом. Компания не выставляет публичных оферт. Компания
+                не занимается деятельностью, подлежащей лицензированию. Компания не предоставляет гарантий
+                заработка на бирже в какой бы то ни было форме. Компания не занимается брокерским обслуживанием.
+                Компания не занимается доверительным урпавлением. Компания не привлекает займы у населения
+                Все биржевые операции соверашются через брокеров, имеющих лицензию в соответствии с действующим законодательством.
+            </p>
+        </section>
+    </footer>
+</body>
+</html>
