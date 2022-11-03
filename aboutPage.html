@@ -37,6 +37,9 @@
                         cryptoCourseTeacherBg: "url('./asset/teaching-crypto-page/teacher_maxim.png')",
                         cryptoCourseLineBg: "url('./asset/teaching-crypto-page/line_5.svg')",
                         aboutPageDirectorBg: "url('asset/about-page/line_3.svg')"
+                    },
+                    screens: {
+                        fullHd: '1920px'
                     }
             }
             }
@@ -237,7 +240,10 @@
     <section class="mt-32 px-10">
         <p class="font-medium text-5xl mb-12">О руководителе</p>
         <img src="./asset/about-page/bracket.svg" alt="" class="h-24 mx-auto" style="margin-bottom: -6%;">
-        <div class="rounded-xl flex border-sourceBlue border px-24 bg-aboutPageDirectorBg bg-contain bg-no-repeat" style="background-position: 50% 160%">
+        <div class="rounded-xl flex border-sourceBlue border px-24 bg-aboutPageDirectorBg bg-contain bg-no-repeat"
+        style="background-position: 50% 160%; @media (max-width: 1920px) {
+            background-position: 50% 200%;
+        }">
             <img src="./asset/about-page/valery.png" alt="Here must be teacher image">
             <div class="font-extralight text-2xl flex flex-col justify-center ml-10">
                 <p class="leading-snug">За 6 лет успешной деятельности наша компания превратилась из одного офиса в Уфе<br>
