@@ -24,6 +24,15 @@
                 width: {
                     thirtyPercent: '30%'
                 },
+                maxWidth: {
+                    highRange: '1536px'
+                },
+                minWidth: {
+                    lowRange: '1366px'
+                },
+                container: {
+                  center: true
+                },
                 backgroundImage: {
                     freeEducationPageBg: "url('./asset/teaching-free-page/edu_free_1.svg')",
                     freeEducationPageBgSec: "url('./asset/teaching-free-page/edu_free_2.svg')",
@@ -74,7 +83,7 @@
             <button class="bg-sourceBlue rounded-md px-2 py-1.5 ml-4" style="box-shadow: 0 0 0 2px #fff, 0 0 0 3px #031138;">Обратный звонок</button>
         </div>
     </header>
-    <main class="flex relative">
+    <main class="flex relative min-w-lowRange max-w-highRange container">
         <div class="flex flex-col mt-14">
             <h1 class="text-xl font-extralight tracking-ultraWide mb-6">/работаем с 2016 года</h1>
             <img src="./asset/home-page/lite-invest.svg" alt="Here must be company name logo" class="mb-12">
@@ -92,7 +101,7 @@
         <img src="./asset/home-page/income.png" alt="Here must be income image" class="absolute" style="left: 50%; top: 65%;">
     </main>
 </section>
-<section class="px-10 text-sourceBlue mt-32">
+<section class="px-10 text-sourceBlue mt-32 max-w-highRange min-w-lowRange container">
   <main class="flex">
     <p class="text-xl font-extralight tracking-ultrawide" style="margin-right: 50%;">/наши успехи</p>
     <div class="flex-col flex mr-24">
@@ -130,8 +139,8 @@
     </div>
   </main>
 </section>
-<section class="mt-32 w-full bg-sourceBlue bg-cover px-10 relative" style="overflow: hidden;">
-  <main class="flex w-inherit justify-between py-10">
+<section class="mt-32 w-full bg-sourceBlue bg-cover px-10 relative overflow-hidden">
+  <main class="flex w-inherit justify-between py-10 max-w-highRange min-w-lowRange container">
     <div class="flex flex-col text-white relative" style="z-index: 10;">
       <p class="text-xl font-extralight tracking-ultraWide mb-4">/наша цель</p>
       <p class="font-medium text-4xl mb-4 w-2/3">Найти талантливых людей, имеющих желание достичь высокогодохода в трейдинге</p>
@@ -148,7 +157,7 @@
     <img src="./asset/home-page/line_2.svg" alt="" class="absolute" style="z-index: 0; width: 100vw; top: 0; left: 0;">
   </main>
 </section>
-<section class="text-sourceBlue p-10 mt-32">
+<section class="text-sourceBlue p-10 mt-32 max-w-highRange min-w-lowRange container">
   <p class="font-medium text-5xl font-medium mb-6">Почему нас выбирают?</p>
   <main class="grid grid-cols-3 gap-4 font-extralight">
       <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
@@ -156,7 +165,7 @@
               <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Программа</p>
               <img src="./asset/home-page/icon-arrow-blue.png" alt="Here must be an arrow icon" class="h-6">
           </div>
-          <img src="./asset/teaching-page/icon_program.svg" alt="" class="h-24 w-max mb-6">
+          <img src="./asset/teaching-page/icon_program.svg" alt="" class="h-24 w-24 mb-6">
           <p class="text-xl">Эффективная программа подготовки и мотивации трейдеров</p>
       </div>
       <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
@@ -164,7 +173,7 @@
               <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Наставничество</p>
               <img src="./asset/home-page/icon-arrow-blue.png" alt="Here must be an arrow icon" class="h-6">
           </div>
-          <img src="./asset/teaching-page/icon_mentor.svg" alt="" class="h-24 w-max mb-6">
+          <img src="./asset/teaching-page/icon_mentor.svg" alt="" class="h-24 w-24 mb-6">
           <p class="text-xl">Действующий трейдер, который обучил более 1000 учеников и будет вести вас к успешным результатам</p>
       </div>
       <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
@@ -172,7 +181,7 @@
               <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Капитал</p>
               <img src="./asset/home-page/icon-arrow-blue.png" alt="Here must be an arrow icon" class="h-6">
           </div>
-          <img src="./asset/teaching-page/icon_capital.svg" alt="" class="h-24 w-max mb-6">
+          <img src="./asset/teaching-page/icon_capital.svg" alt="" class="h-24 w-24 mb-6">
           <p class="text-xl">Деньги на торговлю мы предоставляем сами. Ваши средства не потреюуются</p>
       </div>
       <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
@@ -180,7 +189,7 @@
               <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Формат</p>
               <img src="./asset/home-page/icon-arrow-blue.png" alt="Here must be an arrow icon" class="h-6">
           </div>
-          <img src="./asset/pro-course-page/icon_format.svg" alt="" class="h-24 w-max mb-6">
+          <img src="./asset/pro-course-page/icon_format.svg" alt="" class="h-24 w-24 mb-6">
           <p class="text-xl">Несколько вариантов обучения на выбор</p>
       </div>
       <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
@@ -188,7 +197,7 @@
               <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Трудоустройство</p>
               <img src="./asset/home-page/icon-arrow-blue.png" alt="Here must be an arrow icon" class="h-6">
           </div>
-          <img src="./asset/teaching-page/icon_job.svg" alt="" class="h-24 w-max mb-6">
+          <img src="./asset/teaching-page/icon_job.svg" alt="" class="h-24 w-24 mb-6">
           <p class="text-xl">Начинающий трейдер зарабатывает от 50 тыс. руб. в месяц, опытный зарабатывает от 250 тыс. руб. в месяц</p>
       </div>
       <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
@@ -196,12 +205,12 @@
               <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Риск-менеджер</p>
               <img src="./asset/home-page/icon-arrow-blue.png" alt="Here must be an arrow icon" class="h-6">
           </div>
-          <img src="./asset/teaching-page/icon_manager.svg" alt="" class="h-24 w-max mb-6">
+          <img src="./asset/teaching-page/icon_manager.svg" alt="" class="h-24 w-24 mb-6">
           <p class="text-xl">Помогает не допсутить значительных убытков и поможет постепенному развитию</p>
       </div>
   </main>
 </section>
-<section class="px-10 mt-32 flex justify-between relative" style="z-index: 100;">
+<section class="px-10 mt-32 flex justify-between relative max-w-highRange min-w-lowRange container" style="z-index: 100;">
     <img src="./asset/teaching-crypto-page/line_5.svg" alt="Here must be vector line" class="absolute" style="width: 100vw; top: 30%; left: 0px; z-index: -1;">
     <p class="font-medium text-5xl w-1/3 text-sourceBlue">Зачем нам это нужно?</p>
     <main class="w-2/4 flex flex-col font-extralight items-center rounded-xl py-10 bg-white" style="box-shadow: 0px 0px 20px gray;">
@@ -218,16 +227,16 @@
         <p class="text-2xl w-5/6 mt-8">Поэтому наша цель - <b>найти талантливых людей,</b> которых мы обучим трейдингу, благодаря нашей эффективной программе подготовки трейдеров</p>
     </main>
 </section>
-<section class="mt-32 text-sourceBlue relative" style="z-index: 100;">
+<section class="mt-32 text-sourceBlue relative max-w-highRange min-w-lowRange container" style="z-index: 100;">
     <p class="text-5xl font-medium mt-24 mb-12 ml-10">Наш идеальный кандидат:</p>
       <table class="mx-10">
         <tr class="">
-          <td class="border-sourceBlue border w-1/4 px-3 py-6 bg-white">
-            <p class="font-normal text-xl mb-20">Мужчина 16-30 лет</p>
+          <td class="border-sourceBlue border w-1/4 p-0 bg-white px-6">
+            <p class="font-normal text-xl mb-40">Мужчина 16-30 лет</p>
             <img src="./asset/pro-course-page/icon_arrow.svg" alt="" class="h-6">
           </td>
-          <td class="border-sourceBlue border w-1/4 px-3 py-2 bg-white">
-            <p class="font-normal text-xl mb-20">Аналитический склад ума</p>
+          <td class="border-sourceBlue border w-1/4 px-6 bg-white">
+            <p class="font-normal text-xl mb-40">Аналитический склад ума</p>
             <img src="./asset/pro-course-page/icon_arrow.svg" alt="" class="h-6">
           </td>
           <td class="border-sourceBlue border w-1/4 p-0">
@@ -246,16 +255,16 @@
               <img src="./asset/home-page/icon_circle.svg" alt="" class="h-36">
             </div>
           </td>
-          <td class="border-sourceBlue border w-1/4 px-3 py-6 bg-white">
-            <p class="font-normal text-xl mb-20">Опытный пользователь ПК</p>
+          <td class="border-sourceBlue border w-1/4 px-6 bg-white">
+            <p class="font-normal text-xl mb-40">Опытный пользователь ПК</p>
             <img src="./asset/pro-course-page/icon_arrow.svg" alt="" class="h-6">
           </td>
-          <td class="border-sourceBlue border w-1/4 px-3 py-6 bg-white">
-            <p class="font-normal text-xl mb-20">Не просто хочет, а готов к упорному труду</p>
+          <td class="border-sourceBlue border w-1/4 px-6 bg-white">
+            <p class="font-normal text-xl mb-36">Не просто хочет, а готов к упорному труду</p>
             <img src="./asset/pro-course-page/icon_arrow.svg" alt="" class="h-6">
           </td>
-          <td class="border-sourceBlue border w-1/4 px-3 py-2 bg-white">
-            <p class="font-normal text-xl mb-14">Преимуществом будет тем, кто уже "обжигался" на фондовом рынке и хочет дать себе второй шанс</p>
+          <td class="border-sourceBlue border w-1/4 px-6 bg-white">
+            <p class="font-normal text-xl mb-28">Преимуществом будет тем, кто уже "обжигался" на фондовом рынке и хочет дать себе второй шанс</p>
             <img src="./asset/pro-course-page/icon_arrow.svg" alt="" class="h-6">
           </td>
         </tr>
@@ -263,7 +272,7 @@
     
     
 </section>
-<section class="mt-32 m-auto bg-offersBg bg-no-repeat px-10 py-10 relative" style="background-size: 100% 100%; z-index: 100;">
+<section class="mt-32 m-auto bg-offersBg bg-no-repeat px-10 py-10 relative max-w-highRange min-w-lowRange container" style="background-size: 100% 100%; z-index: 100;">
     <p class="text-sourceBlue text-4xl font-semibold mb-3 letter-widest">Начните зарабатывать<br>от 50 тыс. руб. после обучения</p>
     <p class="text-xl font-extralight mb-6">Оставьте свои данные</p>
     <form action="" class="flex flex-col w-max">
@@ -273,7 +282,7 @@
     </form>
 </section>
 
-<section class="px-10 text-sourceBlue mt-32">
+<section class="px-10 text-sourceBlue mt-32 max-w-highRange min-w-lowRange container">
   <p class="font-extralight text-xl tracking-widest">/этапы</p>
   <p class="font-medium text-5xl">Как проходит обучение</p>
   <main class="grid grid-cols-2 gap-8 mt-12">
@@ -329,7 +338,7 @@
     <img src="./asset/home-page/stage_4.svg" alt="Here must be first stage image" class="h-96">
   </main>
 </section>
-<section class="px-10 text-sourceBlue mt-32">
+<section class="px-10 text-sourceBlue mt-32 max-w-highRange min-w-lowRange container">
   <p class="font-medium text-5xl mb-12">Часто задаваемые вопросы</p>
   <main>
     <div class="flex mb-12">
@@ -349,7 +358,7 @@
     </div>
   </main>
 </section>
-<footer class="mt-24 mb-12">
+<footer class="mt-24 mb-12 max-w-highRange min-w-lowRange container">
   <section class="mt-32 m-auto bg-offersBg bg-no-repeat px-10 py-10" style="background-size: 100% 100%;">
     <p class="text-sourceBlue text-4xl font-semibold mb-3 letter-widest">Начните зарабатывать<br>от 50 тыс. руб. после обучения</p>
     <p class="text-xl font-extralight mb-6">Оставьте свои данные</p>

@@ -24,6 +24,15 @@
                 width: {
                     thirtyPercent: '30%'
                 },
+                maxWidth: {
+                    highRange: '1536px'
+                },
+                minWidth: {
+                    lowRange: '1366px'
+                },
+                container: {
+                    center: true
+                },
                 backgroundImage: {
                     freeEducationPageBg: "url('./asset/teaching-free-page/edu_free_1.svg')",
                     freeEducationPageBgSec: "url('./asset/teaching-free-page/edu_free_2.svg')",
@@ -63,7 +72,7 @@
                 <button class="bg-sourceBlue rounded-md px-2 py-1.5 ml-4" style="box-shadow: 0 0 0 2px #fff, 0 0 0 3px #031138;">Обратный звонок</button>
             </div>
         </header>
-        <main class="flex relative">
+        <main class="flex relative max-w-highRange container">
             <div class="flex flex-col mt-14 ">
                 <h2 class="text-xl font-extralight tracking-ultraWide">/курс</h2>
                 <h1 class="uppercase text-8xl leading-relaxed font-semibold relative z-10">Бесплатное<br>обучение</h1>
@@ -71,7 +80,7 @@
             <img src="./asset/contacts/line_1.svg" alt="Here must be vector line" class="absolute z-1" style="width: 850px; left: 35%;">
         </main>
     </section>
-    <section class="py-10 px-10 text-sourceBlue flex justify-between">
+    <section class="py-10 px-10 text-sourceBlue flex justify-between max-w-highRange container">
         <div class="flex flex-col w-1/4">
             <div class="border-b-4 border-sourceBlue font-medium flex items-baseline mb-2">
                 <p class="text-6xl mr-2">6</p>
@@ -94,7 +103,7 @@
             <p class="font-extralight">Студентов показывают положительные результаты в первое время торговли</p>
         </div>
     </section>
-    <section class="mt-24 px-10 py-10 flex-col">
+    <section class="mt-24 px-10 py-10 flex-col max-w-highRange container">
         <div class="flex justify-between mb-12 items-center">
             <img src="./asset/teaching-free-page/edu_free_1.svg" alt="Here must be education image" class="rounded-md w-2/5">
             <p class="w-2/4 font-extralight text-xl">После первичного интервью студент получает доступ
@@ -110,7 +119,7 @@
             <img src="./asset/teaching-free-page/edu_free_2.svg" alt="Here must be education image" class="rounded-md w-2/5">
         </div>
     </section>
-    <section class="mt-24 p-10 font-medium text-sourceBlue">
+    <section class="mt-24 p-10 font-medium text-sourceBlue max-w-highRange container">
         <p class="text-5xl">Преимущества обучения</p>
         <div class="flex jutify-between mt-12">
             <div class="flex flex-col w-1/3">
@@ -127,7 +136,7 @@
             </div>
         </div>
     </section>
-    <section class="p-10 text-sourceBlue">
+    <section class="p-10 text-sourceBlue max-w-highRange container">
         <p class="text-5xl font-medium mb-12">После бесплатного обучения вы освоите:</p>
         <div class="flex flex-col">
             <div class="border rounded border-sourceBlue bg-freeEducationPageSkillBg bg-no-repeat bg-left mb-4" style="background-size: 12rem 12rem">
@@ -187,13 +196,13 @@
             </div>
         </div>
     </section>
-    <section class="w-full bg-freeEducationPageLineBg bg-no-repeat bg-center justify-center flex py-12" style="background-size: 1200px;">
+    <section class="w-full bg-freeEducationPageLineBg bg-no-repeat bg-center justify-center flex py-12 max-w-highRange container" style="background-size: 1200px;">
         <div class="bg-sourceBlue w-max py-6 px-24 items-center flex flex-col text-center" style="border-radius: 24px">
             <p class="text-white font-medium text-4xl tracking-wider">Стоимость<br>обучения</p>
             <button class="bg-white rounded-md px-12 py-1.5 mt-6 text-sourceBlue font-medium text-2xl" style="box-shadow: 0 0 0 2px #031138, 0 0 0 3px #fff;">0 руб</button>
         </div>
     </section>
-    <footer class="mt-24">
+    <footer class="mt-24 max-w-highRange container">
         <section class="mt-32 m-auto bg-offersBg bg-no-repeat px-10 py-10" style="background-size: 100% 100%;">
             <h1 class="text-sourceBlue text-4xl font-semibold mb-8 letter-widest">Оставьте заявку на обучение<br>и начните зарабатывать<br>
                 от 200 тыс. руб. на трейдинге
