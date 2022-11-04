@@ -50,8 +50,8 @@
 </head>
 <body class="font-montse">
     <section class="w-full text-white ">
-        <header class="flex px-10 bg-sourceBlue w-inherit items-center py-3 justify-between text-xl font-extralight"
-        style="border-bottom: 2px solid transparent; border-image: linear-gradient(to right, transparent, white, transparent 70%, skyblue , transparent); border-image-slice: 1;"
+        <header class="flex px-10 bg-sourceBlue w-inherit items-center py-3 justify-between text-xl font-extralight relative"
+        style="z-index: 100;border-bottom: 2px solid transparent; border-image: linear-gradient(to right, transparent, white, transparent 70%, skyblue , transparent); border-image-slice: 1;"
         >
             <nav class="flex items-center">
                 <img src="./asset/home-page/logo.svg" alt="Here must be logo icon" class="w-16 mr-6">
@@ -69,7 +69,7 @@
                 <a href=""><img src="./asset/home-page/youtube.svg" alt="Here must be youtube icon" class="w-9"></a>
             </div>
             <div class="flex items-center bg-sourceBlue">
-                <button><img src="./asset/home-page/user.svg" alt="Here must be sign out icon" class="w-9"></button>
+                <button><img src="./asset/about-page/user.svg" alt="Here must be sign out icon" class="w-9"></button>
                 <button class="bg-white text-sourceBlue rounded-md px-2 py-1.5 ml-4" style="box-shadow: 0 0 0 2px #031138, 0 0 0 3px #fff;">Обратный звонок</button>
             </div>
         </header>
@@ -101,7 +101,7 @@
         </main>
         <section class="mb-32 flex justify-center text-sourceBlue" style="margin-top: -8%;">
             <main class="flex flex-col items-center rounded-xl w-4/5 py-6 bg-white" style="box-shadow: 0px 0px 20px gray;">
-                <p class="text-4xl font-medium mb-8">Стиль торговли</p>
+                <p class="text-4xl font-medium mb-8">Мы торгуем:</p>
                 <div class="flex justify-around w-full">
                     <div class="flex flex-col w-1/4 items-center">
                        <img src="./asset/teaching-page/icon_futures.svg" alt="Here must be futures image" class="h-24">  
@@ -138,7 +138,7 @@
         </div>
         
         <div class="flex flex-col rounded-xl px-4 py-10" style="width: 49%; box-shadow: 0px 0px 20px gray;">
-            <p class="font-extralight">Выведено средств с брокерского счета<br> за календарный год, руб.</p>
+            <p class="font-extralight text-4xl mb-3">Выведено средств с брокерского счета<br> за календарный год, руб.</p>
             <canvas id="chartWithDraw"></canvas>
             <p class="font-extralight mt-6">Наши трейдеры зарабатывают в среднем <b>от 200 тыс. руб./мес.</b></p>
             <p class="font-extralight mt-6">Поэтому приоритетное направление нашей компании - <b>обучение трейдеров</b> с последующим <b>трудоустройством</b></p>
@@ -237,13 +237,11 @@
         </div>
     </section>
 
-    <section class="mt-32 px-10">
+    <section class="mt-32 px-10 text-sourceBlue">
         <p class="font-medium text-5xl mb-12">О руководителе</p>
-        <img src="./asset/about-page/bracket.svg" alt="" class="h-24 mx-auto" style="margin-bottom: -6%;">
-        <div class="rounded-xl flex border-sourceBlue border px-24 bg-aboutPageDirectorBg bg-contain bg-no-repeat"
-        style="background-position: 50% 160%; @media (max-width: 1920px) {
-            background-position: 50% 200%;
-        }">
+        <img src="./asset/about-page/bracket.svg" alt="" class="h-24 mx-auto" style="margin-bottom: -5rem;">
+        <div class="rounded-xl flex border-sourceBlue border px-24 bg-aboutPageDirectorBg bg-no-repeat"
+        style="background-position: 0% 200px; background-size: 100%;">
             <img src="./asset/about-page/valery.png" alt="Here must be teacher image">
             <div class="font-extralight text-2xl flex flex-col justify-center ml-10">
                 <p class="leading-snug">За 6 лет успешной деятельности наша компания превратилась из одного офиса в Уфе<br>
@@ -255,11 +253,11 @@
             </div>
         </div>
     </section>
-    <section class="px-10 mt-32">
+    <section class="px-10 mt-32 text-sourceBlue">
         <p class="font-medium text-5xl mb-10">Почему наши ученики достигают успеха?</p>
         <div class="flex justify-between mb-3">
             <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4" style="width: 49%;">
-                <div class="flex justify-between mb-6 items-center">
+                <div class="flex justify-between mb-6 items-start">
                     <img src="./asset/teaching-page/icon_program.svg" alt="" class="h-24 w-max mb-6">
                     <div class="flex items-center">
                         <p class="rounded-md border border-sourceBlue w-max h-max px-4 py-1 text-xl text-sourceBlue mr-4">Программа</p>
@@ -271,7 +269,7 @@
                 </p>
             </div>
             <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4" style="width: 49%;">
-                <div class="flex justify-between items-center mb-6">
+                <div class="flex justify-between items-start mb-6">
                     <img src="./asset/teaching-page/icon_mentor.svg" alt="" class="h-24 w-max mb-6">
                     <div class="flex items-center">
                         <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue mr-4">Наставничество</p>
@@ -284,7 +282,7 @@
         <main class="grid grid-cols-3 gap-4 font-extralight mb-3">
             <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
                 <div class="flex justify-between items-center mb-6">
-                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Капитал</p>
+                    <p class="font-normal rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Капитал</p>
                     <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
                 </div>
                 <img src="./asset/teaching-page/icon_capital.svg" alt="" class="h-24 w-max mb-6">
@@ -292,7 +290,7 @@
             </div>
             <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
                 <div class="flex justify-between items-center mb-6">
-                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Риск-менеджер</p>
+                    <p class="font-normal rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Риск-менеджер</p>
                     <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
                 </div>
                 <img src="./asset/teaching-page/icon_manager.svg" alt="" class="h-24 w-max mb-6">
@@ -300,7 +298,7 @@
             </div>
             <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4">
                 <div class="flex justify-between items-center mb-6">
-                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Поддержка</p>
+                    <p class="font-normal rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue">Поддержка</p>
                     <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
                 </div>
                 <img src="./asset/about-page/icon_support.svg" alt="" class="h-24 w-max mb-6">
@@ -310,7 +308,7 @@
         <div class="flex rounded-md border border-sourceBlue px-6 py-4 justify-between">
             <div class="flex flex-col">
                 <div class="flex items-center mb-6">
-                    <p class="rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue mr-3">Преимущество</p>
+                    <p class="font-normal rounded-md border border-sourceBlue w-max px-4 py-1 text-xl text-sourceBlue mr-3">Преимущество</p>
                     <img src="./asset/teaching-page/icon_arrow.svg" alt="Here must be an arrow icon" class="h-6">
                 </div>
                 <p class="text-xl font-extralight">Технологическое преимущество над обычными трейдерами,<br>прямой доступ на биржу, повышенные уровни плечей.</p>
@@ -320,24 +318,24 @@
         
     </section>
     <footer class="mt-32 px-10">
-        <section>
+        <section class="text-sourceBlue">
             <p class="font-medium text-5xl mb-12">Пресса о нас</p>
-            <main class="flex justify-between">
-                <div class="w-1/3">
-                    <img src="./asset/about-page/press_1.jpg" alt="" class="h-96">
+            <main class="grid grid-cols-3 gap-24">
+                <div class="">
+                    <img src="./asset/about-page/press_1.jpg" alt="" class="w-full">
                     <p class="font-extralight text-xl mt-6">Трейдинг на криптовалютном рынке: риски, нюансы, стратегии и инструменты</p>
                 </div>
-                <div class="w-1/3">
-                    <img src="./asset/about-page/press_2.svg" alt="" class="h-96">
-                    <p class="font-extralight text-xl mt-6">Лайт-Инвест: обычно нам не верят,<br>ведь мы учим бесплатно и даем свои деньги трейдерам.</p>
+                <div class="">
+                    <img src="./asset/about-page/press_2.svg" alt="" class="w-full">
+                    <p class="font-extralight text-xl mt-6">Лайт-Инвест: обычно нам не верят, ведь мы учим бесплатно и даем свои деньги трейдерам.</p>
                 </div>
-                <div class="w-1/3">
-                    <img src="./asset/about-page/press_3.jpg" alt="" class="h-96">
+                <div class="">
+                    <img src="./asset/about-page/press_3.jpg" alt="" class="w-full">
                     <p class="font-extralight text-xl mt-6">Как обучаться трейдингу: техники, стратегии, как начать и выйти на хороший заработок</p>
                 </div>
             </main>
         </section>
-        <section class="w-full mt-16">
+        <section class="w-full mt-16 mb-12">
             <div class="flex">
                 <h1 class="text-gray-500">© 2016-2022 Lite-invest |&nbsp;</h1>
                 <a href="" class="text-sky-700">Политика конфиденциальности</a>

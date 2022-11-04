@@ -26,8 +26,9 @@
                 },
                 backgroundImage: {
                     offersBg: "url('./asset/contacts/bg_block.png')",
-                    cryptoEducationBg: "url('./asset/teaching-page/crypto_edu.png')",
-                    bestTraderBg: "url('./asset/teaching-page/best.svg')"
+                    cryptoEducationBg: "url('./asset/teaching-page/crypto_edu_2.png')",
+                    bestTraderBg: "url('./asset/teaching-page/best.svg')",
+                    freeEducationPageSkillBg: "url('./asset/teaching-free-page/1.svg')"
                 },
                 screens: {
                     fullHd: '1921px'
@@ -40,37 +41,125 @@
         .customList li {
             padding-left: 2rem;
             background-image: url(./asset/teaching-page/marker-arrow.svg);
-            background-position: 0 0;
+            background-position: 0 -0.4rem;
             background-size: 2rem 2rem;
             background-repeat: no-repeat;
+            line-height: normal;
+            margin-bottom: 12px;
+            margin-top: 12px;
         }
 
-        input[type="checkbox"] {
+        .formWithCustomRadios input {
+            position: absolute;
+            opacity: 0;
+            сursor: pointer;
+        }
+
+        .formWithCustomRadios label {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 17px;
+            user-select: none;
+        }
+
+        .formWithCustomRadios span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #c9c9c9;
+            border-radius: 50%;
+        }
+
+        .formWithCustomRadios label input:checked ~ span {
+            background-color: #fec901;
+        }
+
+        .formWithCustomRadios span:after {
+            content: "";
+            position: absolute;
             display: none;
         }
 
-        input[type="checkbox"] + label::before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            /* background: none; */
-            border: 1px solid white;
-            border-radius: 100%;
-            margin: 0 5px 0 0;
-            background: url(./asset/teaching-page/circle-for-checkbox.png);
-
+        .formWithCustomRadios label input:checked ~ span:after {
+            display: block;
         }
 
-        input[type="checkbox"]:checked + label::before {
-            /* background: url(./asset/teaching-page/circle-for-checkbox.png); */
-            background-position: -38px -260px;
+        .formWithCustomRadios label span:after {
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+    </style>
+    <style>
+        .control {
+            font-family: arial;
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 5px;
+            padding-top: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+            .control input {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+            }
+        .control_indicator {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            /* background: #b814eb; */
+            border: 2px solid #ffffff;
+            
+        }
+    
+        .control input:disabled ~ .control_indicator {
+            background: #e6e6e6;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        .control_indicator:after {
+            box-sizing: unset;
+            content: '';
+            position: absolute;
+            display: none;
+        }
+        .control input:checked ~ .control_indicator:after {
+            display: block;
+        }
+        .control-radio .control_indicator {
+            border-radius: 50%;
+        }
+        
+        .control-radio .control_indicator:after {
+            left: 2px;
+            top: 2px;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background: #ffffff;
+            transition: background 250ms;
+        }
+        .control-radio input:disabled ~ .control_indicator:after {
+            background: #7b7b7b;
         }
     </style>
     <title>Обучение</title>
 </head>
-<body class="font-montse">
-    <section class="w-full text-white px-10 pb-4" style="background: linear-gradient(to right, #031138 70%, #ffffff 30%)">
+<body class="font-montse overflow-x-hidden">
+    <section class="w-full text-white px-10 pb-16 overflow-hidden" style="background: linear-gradient(to right, #031138 70%, #ffffff 30%)">
         <header class="flex w-inherit items-center py-3 justify-between text-xl font-extralight"
         style="border-bottom: 2px solid transparent; border-image: linear-gradient(to right, transparent, white, transparent 70%, skyblue , transparent); border-image-slice: 1;"
         >
@@ -103,8 +192,8 @@
                     85% трейдеров торгуют в компании абсолютно<br>без вложений. Платная программа обучения<br>исключительно по желанию.
                 </h2>
             </div>
-            <img src="./asset/teaching-page/book.png" alt="Here must be phone image" class="absolute z-1" style="right: 10%; top: 10%; width: 500px;">
-            <!-- <img src="./asset/contacts/line_1.svg" alt="Here must be vector line" class="absolute z-11" style="width: 1100px; left: 35%; transform: rotate(-10deg)"> -->
+            <img src="./asset/teaching-page/book.png" alt="Here must be phone image" class="absolute z-1" style="left: 55%; top: 0%; width: 32rem;">
+            <img src="./asset/contacts/line_1.svg" alt="Here must be vector line" class="absolute z-1" style="width: 66rem; left: 45%;">
         </main>
     </section>
     <section class="px-10 py-10 mt-32">
@@ -203,7 +292,9 @@
                 <button class="bg-white rounded-md px-6 py-1.5 mt-4 text-sourceBlue font-extralight w-max" style="box-shadow: 0 0 0 2px #031138, 0 0 0 3px #fff;">Подробнее</button>
             </div>
             <div class="flex rounded-md border border-sourceBlue row-span-1 bg-cryptoEducationBg bg-cover items-center justify-start">
-                <svg class="ml-8 pt-8" xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill-rule="evenodd" clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 111.77 108.28"><path fill="#fff" d="M3.49 96.05l104.79 0 0 8.73 -104.79 0 0 -8.73zm108.28 -1.59l0 12.07c0,1.06 -0.69,1.74 -1.75,1.74l-108.28 0c-1.06,0 -1.75,-0.69 -1.75,-1.74l0 -11.92c0.3,-2.63 1.45,-2.05 5.24,-2.05 -0.79,-1.19 -1.75,-2.6 -1.75,-4.58l0 -19.21c0,-2.72 0.94,-5.39 1.89,-7.28 1.17,-2.34 1.98,-3.47 3.73,-5.22 6.29,-6.29 11.91,-5.62 19.7,-5.62 0,-1.83 -0.03,-1.18 -1.14,-2.13 -2.63,-2.25 -5.55,-6.79 -5.63,-10.09 -4.27,0 -7.2,-3.29 -7.2,-6.33l0 -9.61c0,-4.62 1.98,-9.28 4.37,-12.66 1.12,-1.59 1.14,-1.34 1.9,-2.25 1.06,-1.27 2.3,-2.34 3.69,-3.3 4.77,-3.29 8.61,-4.28 14.72,-4.28 5.62,0 12.94,3.42 16.34,7.67 0.71,0.89 0.81,0.75 1.87,2.28 5.16,7.48 4.28,12.87 4.28,21.92 0,4.03 -3.47,6.55 -7.21,6.55 -0.07,3.06 -2.44,6.92 -4.64,9.11 -2.3,2.3 -2.13,1.19 -2.13,3.11 4.64,0 5.5,-0.21 9.92,0.36 1.29,0.17 1.27,-0.36 2.52,-0.36l41.26 0c3.37,0 6.55,3.18 6.55,6.55l0 32.53c0,0.97 -0.53,2.19 -0.87,2.84 3.07,0 4.08,-0.37 4.36,1.9zm-75.09 -10.42c2.25,0.52 3.95,1.21 5.63,2.88 1.13,1.13 2.72,3.63 2.88,5.63l-8.51 0 0 -8.51zm63.96 8.51l-43 0 0 -34.27c0,-2.75 1.4,-4.15 4.15,-4.15l38.86 0c2.68,0 4.15,1.47 4.15,4.15l0 30.13c0,2.68 -1.47,4.15 -4.15,4.15zm-53.48 -5.24l6.99 0 0 5.24 -5.24 0c-0.52,-2.25 -0.78,-3.41 -1.75,-5.24zm6.99 -30.34l0 26.85 -9.61 0c-0.35,0 -1.44,-0.9 -1.87,-1.18 -1.9,-1.25 -4.35,-2.31 -6.86,-2.31l-18.34 0c-2.34,0 -2.34,3.49 0,3.49l15.72 0 0 8.73 -20.52 0c-3.34,0 -5.68,-2.34 -5.68,-5.68l0 -16.15c0,-9.76 6.83,-16.59 16.59,-16.59l5.24 0c0.1,4.3 4.51,8.73 8.95,8.73 3.13,0 5.18,-0.52 7.37,-2.67 1.33,-1.3 2.83,-3.6 2.89,-6.06l6.77 0c-0.1,1.17 -0.65,1.59 -0.65,2.84zm-21.83 -5.67c3.11,0.73 5.16,1.81 9.87,0.7l2.35 -0.7c0,3.39 -0.43,5.79 -3.2,7.28 -2.66,1.43 -5.92,0.7 -7.6,-1.5 -1.32,-1.73 -1.43,-2.89 -1.43,-5.78zm-6.99 -16.59l0 -6.77c8.06,0 13.05,-1.63 19.15,-6.17 0.68,-0.51 1.23,-1.08 1.81,-1.47l3.99 4.96c0.31,0.41 1.25,1.43 1.25,1.81 0,6.83 0.88,13 -3.65,17.74 -7.64,8 -22.55,3.81 -22.55,-10.1zm29.69 0.22l0 -6.99c4.38,1.02 3.84,4.5 2.42,5.92 -0.63,0.63 -1.42,0.83 -2.42,1.07zm-33.18 -6.99l0 6.99c-4.17,-0.97 -3.98,-4.24 -2.44,-5.94 0.61,-0.67 1.46,-0.82 2.44,-1.05zm-3.49 -2.62c0,-5.92 1.47,-11.45 5.51,-15.45 12.41,-12.27 29.33,-4.85 33.21,6.41 1.05,3.04 1.44,5.02 1.44,9.04 -1.46,-0.77 -2.14,-0.87 -4.37,-0.87 -0.57,-0.84 -1.05,-1.4 -1.68,-2.24 -0.92,-1.23 -4.72,-6.49 -5.52,-6.49 -2.88,0 -3.06,4 -11.98,7.23 -7.83,2.84 -12.76,0.33 -16.62,2.37z" class="color031138 svgShape"/><path fill="#fff" d="M81.21 68.11c4.22,0 7.13,5.44 3.66,8.9 -4.84,4.84 -12.13,-2.53 -7.33,-7.33 0.71,-0.71 2.35,-1.57 3.66,-1.57zm-8.73 4.59l0 1.31c0,4.03 4.05,8.08 8.08,8.08l1.31 0c4.03,0 8.08,-4.05 8.08,-8.08l0 -1.31c0,-4.03 -4.05,-8.08 -8.08,-8.08l-1.31 0c-4.03,0 -8.08,4.05 -8.08,8.08z" class="color031138 svgShape"/></svg></svg>
+                <div class="bg-freeEducationPageSkillBg bg-no-repeat bg-cover bg-left" style="width: 16rem;">
+                    <svg class="ml-16 pt-8" xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill-rule="evenodd" clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 111.77 108.28"><path fill="#fff" d="M3.49 96.05l104.79 0 0 8.73 -104.79 0 0 -8.73zm108.28 -1.59l0 12.07c0,1.06 -0.69,1.74 -1.75,1.74l-108.28 0c-1.06,0 -1.75,-0.69 -1.75,-1.74l0 -11.92c0.3,-2.63 1.45,-2.05 5.24,-2.05 -0.79,-1.19 -1.75,-2.6 -1.75,-4.58l0 -19.21c0,-2.72 0.94,-5.39 1.89,-7.28 1.17,-2.34 1.98,-3.47 3.73,-5.22 6.29,-6.29 11.91,-5.62 19.7,-5.62 0,-1.83 -0.03,-1.18 -1.14,-2.13 -2.63,-2.25 -5.55,-6.79 -5.63,-10.09 -4.27,0 -7.2,-3.29 -7.2,-6.33l0 -9.61c0,-4.62 1.98,-9.28 4.37,-12.66 1.12,-1.59 1.14,-1.34 1.9,-2.25 1.06,-1.27 2.3,-2.34 3.69,-3.3 4.77,-3.29 8.61,-4.28 14.72,-4.28 5.62,0 12.94,3.42 16.34,7.67 0.71,0.89 0.81,0.75 1.87,2.28 5.16,7.48 4.28,12.87 4.28,21.92 0,4.03 -3.47,6.55 -7.21,6.55 -0.07,3.06 -2.44,6.92 -4.64,9.11 -2.3,2.3 -2.13,1.19 -2.13,3.11 4.64,0 5.5,-0.21 9.92,0.36 1.29,0.17 1.27,-0.36 2.52,-0.36l41.26 0c3.37,0 6.55,3.18 6.55,6.55l0 32.53c0,0.97 -0.53,2.19 -0.87,2.84 3.07,0 4.08,-0.37 4.36,1.9zm-75.09 -10.42c2.25,0.52 3.95,1.21 5.63,2.88 1.13,1.13 2.72,3.63 2.88,5.63l-8.51 0 0 -8.51zm63.96 8.51l-43 0 0 -34.27c0,-2.75 1.4,-4.15 4.15,-4.15l38.86 0c2.68,0 4.15,1.47 4.15,4.15l0 30.13c0,2.68 -1.47,4.15 -4.15,4.15zm-53.48 -5.24l6.99 0 0 5.24 -5.24 0c-0.52,-2.25 -0.78,-3.41 -1.75,-5.24zm6.99 -30.34l0 26.85 -9.61 0c-0.35,0 -1.44,-0.9 -1.87,-1.18 -1.9,-1.25 -4.35,-2.31 -6.86,-2.31l-18.34 0c-2.34,0 -2.34,3.49 0,3.49l15.72 0 0 8.73 -20.52 0c-3.34,0 -5.68,-2.34 -5.68,-5.68l0 -16.15c0,-9.76 6.83,-16.59 16.59,-16.59l5.24 0c0.1,4.3 4.51,8.73 8.95,8.73 3.13,0 5.18,-0.52 7.37,-2.67 1.33,-1.3 2.83,-3.6 2.89,-6.06l6.77 0c-0.1,1.17 -0.65,1.59 -0.65,2.84zm-21.83 -5.67c3.11,0.73 5.16,1.81 9.87,0.7l2.35 -0.7c0,3.39 -0.43,5.79 -3.2,7.28 -2.66,1.43 -5.92,0.7 -7.6,-1.5 -1.32,-1.73 -1.43,-2.89 -1.43,-5.78zm-6.99 -16.59l0 -6.77c8.06,0 13.05,-1.63 19.15,-6.17 0.68,-0.51 1.23,-1.08 1.81,-1.47l3.99 4.96c0.31,0.41 1.25,1.43 1.25,1.81 0,6.83 0.88,13 -3.65,17.74 -7.64,8 -22.55,3.81 -22.55,-10.1zm29.69 0.22l0 -6.99c4.38,1.02 3.84,4.5 2.42,5.92 -0.63,0.63 -1.42,0.83 -2.42,1.07zm-33.18 -6.99l0 6.99c-4.17,-0.97 -3.98,-4.24 -2.44,-5.94 0.61,-0.67 1.46,-0.82 2.44,-1.05zm-3.49 -2.62c0,-5.92 1.47,-11.45 5.51,-15.45 12.41,-12.27 29.33,-4.85 33.21,6.41 1.05,3.04 1.44,5.02 1.44,9.04 -1.46,-0.77 -2.14,-0.87 -4.37,-0.87 -0.57,-0.84 -1.05,-1.4 -1.68,-2.24 -0.92,-1.23 -4.72,-6.49 -5.52,-6.49 -2.88,0 -3.06,4 -11.98,7.23 -7.83,2.84 -12.76,0.33 -16.62,2.37z" class="color031138 svgShape"/><path fill="#fff" d="M81.21 68.11c4.22,0 7.13,5.44 3.66,8.9 -4.84,4.84 -12.13,-2.53 -7.33,-7.33 0.71,-0.71 2.35,-1.57 3.66,-1.57zm-8.73 4.59l0 1.31c0,4.03 4.05,8.08 8.08,8.08l1.31 0c4.03,0 8.08,-4.05 8.08,-8.08l0 -1.31c0,-4.03 -4.05,-8.08 -8.08,-8.08l-1.31 0c-4.03,0 -8.08,4.05 -8.08,8.08z" class="color031138 svgShape"/></svg></svg>
+                </div>
             </div>
             <div class="flex flex-col rounded-md border border-sourceBlue px-6 py-4 row-span-1">
                 <h1 class="w-max text-3xl text-sourceBlue font-medium mb-6">Крипто обучение</h1>
@@ -214,9 +305,9 @@
         </main>
     </section>
     <section class="mt-26 px-10 py-10">
-        <h1 class="text-sourceBlue text-4xl tracking-widest font-semibold mb-6">Действующие преподаватели</h1>
+        <h1 class="text-sourceBlue text-4xl font-medium mb-6">Действующие преподаватели</h1>
         <main class="grid grid-cols-2 gap-4">
-            <div class="flex flex-col border border-sourceBlue rounded-md col-span-1">
+            <div class="flex flex-col border border-sourceBlue rounded-md">
                 <div class="flex items-center px-4 py-4 mb-8">
                     <img src="./asset/teaching-page/maxim.png" alt="Here must be teacher photo" class="rounded-full h-38">
                     <aside class="ml-4">
@@ -224,14 +315,14 @@
                         <p class="text-gray-700 font-extralight text-2xl">Преподаватель</p>
                     </aside>
                 </div>
-                <div class="bg-sourceBlue text-white font-extralight rounded-md px-4">
+                <div class="bg-sourceBlue text-white font-extralight rounded-md px-4" style="border-radius: 4px;">
                     <ul class="customList">
                         <li>Действующий трейдер с 32+ мес. безупречной торговли</li>
                         <li>Обучил более 100 учеников, свыше 85% учеников имеют положительный опыт в трейдинге</li>
                     </ul>
                 </div>
             </div>
-            <div class="flex flex-col border border-sourceBlue rounded-md col-span-1">
+            <div class="flex flex-col border border-sourceBlue rounded-md">
                 <div class="flex items-center px-4 py-4 mb-8">
                     <img src="./asset/teaching-page/oleg.png" alt="Here must be teacher photo" class="rounded-full">
                     <aside class="ml-4">
@@ -239,7 +330,7 @@
                         <p class="text-gray-700 font-extralight text-2xl">Преподаватель</p>
                     </aside>
                 </div>
-                <div class="bg-sourceBlue text-white font-extralight rounded-md px-4">
+                <div class="bg-sourceBlue text-white font-extralight rounded-md px-4" style="border-radius: 4px;">
                     <ul class="customList">
                         <li>Действующий трейдер с 70+ мес. безупречной торговли</li>
                         <li>Обучил более 100 учеников, свыше 85% учеников имеют положительный опыт в трейдинге</li>
@@ -249,18 +340,18 @@
         </main>
     </section>
     <section class="mt-32 px-10 py-10">
-        <main class="grid grid-cols-3">
-            <div class="col-span-1">
-                <h1 class="text-sourceBlue font-medium mb-4 text-3xl">Лучшие трейдеры</h1>
+        <main class="flex">
+            <div class="">
+                <h1 class="text-sourceBlue font-medium mb-4 text-4xl">Лучшие трейдеры</h1>
                 <p class="font-extralight">Заработок за день</p>
-                <img src="./asset/teaching-page/cards.png" alt="Here must be cards image" class="h-72">
+                <img src="./asset/teaching-page/cards.png" alt="Here must be cards image">
             </div>
-            <div class="bg-bestTraderBg max-fullHd:bg-contain max-fullHd:bg-no-repeat max-fullHd:ml-96 bg-cover pt-36 pl-80 col-span-2">
+            <div class="bg-bestTraderBg bg-contain bg-no-repeat pt-36 pl-80" style="width: 60rem; margin-left: 40rem;">
                 <p class="text-white font-extralight border-b-2 w-max text-5xl pb-4">П**** И***</p>
                 <p class="text-white font-medium text-5xl pt-4">19 781 785 ₽</p>
             </div>
         </main>
-        <img src="./asset/teaching-page/arrows.svg" alt="Here must be arrows image" style="margin-left: 75%" class="h-4 mt-4">
+        <img src="./asset/teaching-page/arrows.svg" alt="Here must be arrows image" style="margin-left: 90rem" class="h-4 mt-4">
     </section>
     <footer>
         <section class="px-10 py-10">
@@ -268,27 +359,35 @@
             <p class="text-gray-400 text-xl mt-4">Пройдите тест и выберите оптималное обучение для вас</p>
         </section>
         <section class="mt-12 m-auto bg-offersBg bg-no-repeat px-10 py-10" style="background-size: 100% 100%;">
-            <h1 class="text-sourceBlue text-xl font-extralight mb-8 letter-widest">Какой у Вас опыт на финансовом рынке?</h1>
-            <form action="" class="flex flex-col w-max">
-                <div class="">
-                    <input type="checkbox" id="question1">
-                    <label for="question1">Нет опыта</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="question2">
-                    <label for="question2">Только начал изучать</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="question3">
-                    <label for="question3">Уже торговал, но не имею особых результатов</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="question4" class="border border-white bg-none">
-                    <label for="question4">Имею стабильный доход</label>
-                </div>
+            <h1 class="text-sourceBlue text-xl mb-8 letter-widest">Какой у Вас опыт на финансовом рынке?</h1>
+            <form class="control-group">
+                <label class="control control-radio font-montse w-max">
+                    Нет опыта
+                    <input type="radio" name="question" checked='true'/>
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-radio font-montse w-max">
+                    Только начал изучать
+                    <input type="radio" name="question"/>
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-radio font-montse w-max">
+                    Уже торговал, но не имею особых результатов
+                    <input type="radio" name="question"/>
+                    <div class="control_indicator"></div>
+                </label>
+                <label class="control control-radio font-montse w-max">
+                    Имею стабильный доход
+                    <input type="radio" name="question"/>
+                    <div class="control_indicator"></div>
+                </label>
             </form>
+            <div class="flex w-1/4 justify-between mt-6">
+                <button type="button" class="bg-gray-600 py-1 px-6 text-white text-xl rounded-md" disabled="true">Назад</button>
+                <button type="button" class="bg-sourceBlue py-1 px-6 text-white text-xl rounded-md">Далее</button>
+            </div>
         </section>
-        <section class="w-full px-10 mt-16">
+        <section class="w-full px-10 mt-16 mb-12">
             <div class="flex">
                 <h1 class="text-gray-500">© 2016-2022 Lite-invest |&nbsp;</h1>
                 <a href="" class="text-sky-700">Политика конфиденциальности</a>
